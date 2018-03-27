@@ -1,0 +1,624 @@
+@import 'custom-variables';
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+//media screen size
+//
+@mixin respond-to($media) {
+    @if $media==mobile {
+        @media only screen and (max-width: 750px) {
+            @content;
+        }
+    }
+    @else if $media==mobile-xs {
+        @media only screen and (max-width: 375px) {
+            @content;
+        }
+    }
+    @else if $media==tablets {
+        @media only screen and (min-width: 751px) and (max-width: 1100px) {
+            @content;
+        }
+    }
+    @else if $media==web-1366 {
+        @media only screen and (min-width: 1366px) and (max-width: 1679px) {
+            @content;
+        }
+    }
+    @else if $media==web-1680 {
+        @media only screen and (min-width: 1680px) and (max-width: 1919px) {
+            @content;
+        }
+    }
+    @else if $media==web-1920 {
+        @media only screen and (min-width: 1920px) {
+            @content;
+        }
+    }
+}
+
+@mixin placeholder {
+    ::-webkit-input-placeholder {
+        @content
+    }
+    :-moz-placeholder {
+        @content
+    }
+    ::-moz-placeholder {
+        @content
+    }
+    :-ms-input-placeholder {
+        @content
+    }
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    filter: alpha(opacity=($opacity*100));
+    /* For IE8 and earlier */
+}
+
+.opacity {
+    @include opacity(0.4);
+}
+
+@mixin hyphens($hyphens) {
+    -webkit-hyphens: $hyphens;
+    -moz-hyphens: $hyphens;
+    -ms-hyphens: $hyphens;
+    hyphens: $hyphens;
+}
+
+@mixin transform-origin($x, $y) {
+    -ms-transform-origin: $x $y;
+    -webkit-transform-origin: $x $y;
+    transform-origin: $x $y;
+}
+
+@mixin box-shadow($x, $y, $opacity){
+    -webkit-box-shadow: $x $y 10px 0 rgba(0,0,0,$opacity);
+    box-shadow: $x $y 10px 0 rgba(0,0,0,$opacity);
+}
+
+p {
+    //@include hyphens(auto);
+}
+
+strong {
+    font-weight: bold;
+}
+
+@mixin transition($time) {
+    -webkit-transition: all $time ease-in-out;
+    transition: all $time ease-in-out;
+}
+
+h2 {
+    font-size: $h2;
+    line-height: $h2-line-height;
+    margin-bottom: $h1-margin-bottom;
+}
+
+h3 {
+    font-size: $h3;
+    line-height: $h3-line-height;
+    margin-bottom: $h1-margin-bottom;
+}
+
+//== Content style set
+//
+//
+//Font-family
+.font-andale {
+    font-family: $font-andale;
+}
+
+.avenir-black {
+    font-family: $font-avenir;
+    font-weight: bold;
+}
+
+//list
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    clear: both;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+//link style
+a {
+    color: white;
+    font-weight: bold;
+    @extend .pointer;
+    &.no-underline {
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &.yellow {
+        @extend .font-andale;
+        color: $link-active;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    @include respond-to(mobile) {
+        word-break: break-word;
+    }
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+//spacing
+.p-spacing-less,
+.margin-none {
+    margin: 0;
+    padding: 0;
+}
+
+.padding-none {
+    padding: 0;
+}
+
+.margin-top-no {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.first-heading {
+    @extend .margin-top-no;
+    &.heading-andela {
+        @extend .margin-top-no;
+    }
+}
+
+//Font size
+.text-small {
+    font-size: $font-size-medium;
+}
+
+//Font case
+.uppercase {
+    text-transform: uppercase;
+}
+
+//Form
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"],
+textarea {
+    width: 100%;
+    outline: none;
+    -webkit-appearance: none;
+    color: $black;
+    background-color: #fff;
+    border: 0;
+    //border-bottom: 1px solid $color-field-border;
+    padding: $vertical-space-xl 6px $vertical-space-xl 6px;
+    //font-size: $font-size-xsmall;
+    &:focus {
+        outline: none;
+       // border-bottom: 1px solid $primary-blue;
+    }
+    &.short {
+        width: 240px;
+        display: inline-block;
+        margin-right: $vertical-space-small;
+    }
+    &.medium {
+        width: 200px * 2;
+    }
+    &.error{
+        color: $color-error;
+    }
+
+}
+
+input[type="text"] {
+    @include border-radius(5px);
+    height: $line-height-computed*2;
+    font-size: $font-size-large;
+}
+
+select{
+    width: 100%;
+    height: $line-height-computed*2;
+    background-color: #fff;
+    padding: $vertical-space-xl 6px ($vertical-space-xl/2) 6px;
+    margin-bottom: $line-height-computed;
+    font-size: $font-size-large;
+}
+
+textarea {
+    @include border-radius(5px);
+    text-align: left;
+    font-size: $font-size-large;
+    width: $full-width;
+}
+
+.btn-attach{
+    margin: $line-height-computed 0 ;
+    .limit{
+        font-style:italic;
+        font-size: $font-size-xsmall;
+    }
+    .error{
+        //color: white;
+        //background:rgba(255, 0, 60, 0.5) ;
+        display: block;
+        font-style:italic;
+    }
+}
+
+.file-upload{
+    font-size: $font-size-large;
+    color: black;
+    background-color: #fff;
+    height: $line-height-computed*2;
+    max-width: $width-base;
+    padding: ($vertical-space-xl - 2) 6px ($vertical-space-xl/2) 6px;
+    cursor: pointer;
+    @include border-radius(5px);
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file-name {
+    padding-left: $vertical-space-xl/2;
+    line-height: 2;
+    word-break: break-word;
+}
+
+@include placeholder {
+    color: $font-default-gray;
+    //text-transform: uppercase;
+    //font-family: $font-andale;
+}
+
+.inputbox{
+    width: 100%;
+    color: $black;
+    background-color: #fff;
+    border: 0;
+    border-bottom: 1px solid $color-field-border;
+    padding: $vertical-space-xl 6px ($vertical-space-xl/2) 6px;
+    font-size: $font-size-xsmall;
+    @extend .font-andale;
+
+    &.error{
+       border-bottom: 1px solid $color-error;
+    }
+
+    .error-inline-note{
+        margin: 0;
+        padding: 0;
+        color: $color-error;
+        @extend .uppercase;
+    }
+}
+
+.control-holder{
+    position: relative;
+    .error-note{
+        top: $width-base * 0.46;
+    }
+}
+
+.error-note {
+    position: absolute;
+    //top: $width-base * 0.1;
+    //bottom: $width-base * 1.1;
+    display: inline-block;
+    font-style: normal !important;
+    font-size: $font-size-medium;
+    color: $color-base;
+    height: auto;
+
+    //box arrow
+    &:before{
+        content: "";
+        display: block;
+        border-style: solid;
+        border-color: transparent transparent transparent;//top leftright bottom
+        border-bottom-color: white;
+        border-top-width: 0;
+        border-left-width: $width-base * 0.1;
+        border-right-width: $width-base * 0.1;
+        border-bottom-width: $width-base * 0.1;
+        margin-left: -($width-base * 0.1);
+        position: absolute;
+        left: $full-width * 0.3;
+        top: -($width-base * 0.08);
+        bottom: auto;
+    }
+    span{
+        display: inline-block;
+        border:solid 1px white;
+        background: white;
+        padding: ($width-base * 0.02) ($width-base * 0.05);
+        @include border-radius($width-base * 0.02);
+        @include box-shadow(5px, 5px, 0.3);
+    }
+    .fa-exclamation-triangle{
+        color: $warning;
+    }
+}
+
+.button{
+    position: relative;
+    .error-note{
+        top: $width-base * 0.43;
+        margin-bottom: 0;
+    }
+}
+
+.btn {
+    background-color: transparent;
+    outline: none !important;
+    border: 0;
+    &:active,
+    &.active {}
+    &.btn-t-blue {
+        color: $brand-primary;
+    }
+    &.btn-italic {
+        font-style: italic;
+    }
+}
+
+.btn-primary {
+    width: $full-width;
+    padding: $vertical-space-small $vertical-space-small*2;
+    color: white;
+    background-color: $primary-blue;
+    font-weight: bold;
+    line-height: $line-height;
+    text-align: center;
+    text-decoration: none;
+    @extend .pointer;
+     @include border-radius (5px);
+
+    &.align-left {
+        padding: 0;
+    }
+}
+
+.btn-continue {
+    margin-top: $vertical-space-small*2;
+    display: inline-block;
+    background-color: white;
+    padding: 6px $vertical-space-small*6;
+    color: $primary-blue;
+    &.download, &.blue {
+        background: $primary-blue;
+        color: #fff;
+        font-weight: bold;
+    }
+}
+
+//icons
+.icon-close-round {
+    width: $width-base * 0.13;
+    height: $width-base * 0.13;
+    fill: white;
+}
+.btn-close{
+    cursor: pointer;
+    input[type="submit"]{
+        display: none;
+    }
+}
+
+//Font face
+//
+//
+@font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/avenir/Avenir-Light.eot');
+    src: url('../fonts/avenir/Avenir-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/avenir/Avenir-Light.woff') format('woff'), url('../fonts/avenir/Avenir-Light.ttf') format('truetype'), url('../fonts/avenir/Avenir-Light.svg#avenir') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/avenir/Avenir-Book.eot');
+    src: url('../fonts/avenir/Avenir-Book.eot?#iefix') format('embedded-opentype'), url('../fonts/avenir/Avenir-Book.woff') format('woff'), url('../fonts/avenir/Avenir-Book.ttf') format('truetype'), url('../fonts/avenir/Avenir-Book.svg#avenir') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/avenir/Avenir-Black.eot');
+    src: url('../fonts/avenir/Avenir-Black.eot?#iefix') format('embedded-opentype'), url('../fonts/avenir/Avenir-Black.woff') format('woff'), url('../fonts/avenir/Avenir-Black.ttf') format('truetype'), url('../fonts/avenir/Avenir-Black.svg#avenir') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'AvenirNext';
+    src: url('../fonts/avenir-next/AvenirNextLTPro-Regular.eot');
+    src: url('../fonts/avenir-next/AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/avenir-next/AvenirNextLTPro-Regular.woff') format('woff'), url('../fonts/avenir-next/AvenirNextLTPro-Regular.ttf') format('truetype'), url('../fonts/avenir-next/AvenirNextLTPro-Regular.svg#avenir') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'AndaleMono';
+    src: url('../fonts/andaleMono/AndaleMono.eot');
+    src: url('../fonts/andaleMono/AndaleMono.eot?#iefix') format('embedded-opentype'), url('../fonts/andaleMono/AndaleMono.woff') format('woff'), url('../fonts/andaleMono/AndaleMono.ttf') format('truetype'), url('../fonts/andaleMono/AndaleMono.svg#avenir') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 0 ($width-base*0.05) 0 0;
+}
+
+//Fontawesome Icon
+.fa-caret-right:before {
+    content: " \f0da ";
+}
+
+.fa-exclamation-triangle:before{
+    content: " \f071 ";
+}
+
+//
+//
+//Flash animation
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animated {
+    &.infinite {
+        animation-iteration-count: infinite;
+    }
+}
+
+.animated {
+    &.hinge {
+        animation-duration: 2s;
+    }
+}
+
+.animated {
+    &.flipOutX {
+        animation-duration: .75s;
+    }
+    &.flipOutY {
+        animation-duration: .75s;
+    }
+    &.bounceIn {
+        animation-duration: .75s;
+    }
+    &.bounceOut {
+        animation-duration: .75s;
+    }
+}
+
+@-webkit-keyframes flash {
+    from,
+    50%,
+    to {
+        opacity: 1;
+    }
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+@keyframes flash {
+    from,
+    50%,
+    to {
+        opacity: 1;
+    }
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+.flash {
+    -webkit-animation-name: flash;
+    animation-name: flash;
+}
+
+//Fade out
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+}

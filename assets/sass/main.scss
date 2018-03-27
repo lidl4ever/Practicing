@@ -1,0 +1,189 @@
+@import 'custom-variables';
+@import 'custom-type';
+body {
+    font: 300 $font-size-xlarge $font-avenir;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    background: #fff;
+    line-height: $chibi-line-height;
+}
+
+//firfox hack
+@-moz-document url-prefix() {
+    body {
+        font-size: $font-size-medium;
+    }
+}
+body {
+    background: url(/assets/img/04_code_web.png) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+body,
+button {
+    -webkit-font-smoothing: antialiased; // Fix for webkit rendering
+    -webkit-text-size-adjust: 100%;
+}
+
+p{
+    margin: 0 0 $line-height-computed 0;
+    padding: 0;
+
+    &.note{
+        margin: $line-height-computed 0;
+    }
+}
+.loader {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.bg-cover {
+    height: 100vh;
+    padding-top: $full-width * 0.05;
+    padding-bottom: $full-width * 0.05;
+}
+
+.label{
+    margin: 0 0 $line-height-computed/4 0;
+}
+
+#web-app {
+    position: relative;
+}
+
+.content-container {
+}
+.section-main-heading {
+    font-size: $h2;
+    line-height: $h2-line-height;
+    @extend .uppercase,.padding-none;
+}
+.box-main-heading {
+    font-size: $h2;
+    line-height: $h2-line-height;
+    @extend .padding-none;
+}
+.chibi-box {
+    position: relative;
+    color: white;
+    background: rgba(0,0,0,0.6);
+    width: 650px;
+    min-height: $width-base * 3.5;
+    margin: 0 auto;
+    padding: ($vertical-space-xl*3) ($vertical-space-xl*3) ($vertical-space-xl*6) ($vertical-space-xl*3);
+    @include border-radius (10px);
+
+    img{
+        width: $full-width;
+    }
+}
+.pd-img{
+  margin-bottom: $vertical-space-xl*2;
+  img{display: block;}
+}
+.warranty-title, .section-title{font-weight: bold;}
+.divider {
+    margin: 0 0 ($vertical-space-xl*2) 0;
+    padding: 0;
+}
+.power-by {
+    position: absolute;
+    bottom: $vertical-space-xl*2;
+    right: $vertical-space-xl*3;
+    text-align: right;
+    font-size: $font-size-small;
+    color: white;
+    .txt{padding-right: 3px;}
+    .logo {
+        img {
+            width: $width-base;
+            vertical-align: middle;
+        }
+    }
+}
+.progress-bar{
+  position: relative;
+  top: $vertical-space-xl / 2;
+  .bar-container{
+      position: relative;
+      width: $full-width*0.95;
+      height: 5px;
+      background: $gray;
+  }
+  .bar{
+      content: "";
+      display: inline;
+      position: absolute;
+      width: 0;
+      height: 100%;
+      left: 0%;
+      text-align: center;
+      background: $primary-blue;
+   }
+   .btn-close{
+    position: absolute;
+    right: 0;
+    top: -($width-base*0.09);
+   }
+}
+.error, .red{
+    color: $color-error;
+}
+.list{
+    margin-top: $vertical-space-xl * 3;
+    margin-bottom: $vertical-space-xl * 3;
+    ul{
+      list-style: disc;
+      margin-left: $vertical-space-xl * 1.7;
+
+    }
+    li{
+      margin-bottom: $vertical-space-xl;
+    }
+    a{
+      font-size: $font-size-xlarge;
+      color: white;
+      &:hover{
+        color: $primary-blue;
+      }
+    }
+}
+
+.btn{
+  background: $primary-blue;
+  color: white;
+  font-size: $font-size-xlarge;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  padding: $vertical-space-xl 0;
+  @include border-radius(5px);
+}
+
+.btn-block{
+  display: block;
+  margin-bottom: $vertical-space-xl*2;
+}
+
+.mail{
+  color: white;
+  font-size: $font-size-xlarge;
+}
+
+@include respond-to(mobile){
+    .content-container{
+        padding-top: $width-base * 0.15;
+        padding-bottom: $width-base * 0.15;
+        margin-left: $width-base * 0.15;
+        margin-right: $width-base * 0.15;
+    }
+    .chibi-box{
+        width: $full-width;
+    }
+    .bg-cover{
+        height: initial;
+    }
+}
