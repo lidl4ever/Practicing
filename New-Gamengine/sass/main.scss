@@ -1,0 +1,1143 @@
+@import "base/base";
+@import "base/typography";
+@import "modules/mixins";
+@import "modules/variables";
+
+@import "pages/home";
+@import "pages/utility-tokens";
+
+@import "layout/header";
+@import "layout/footer";
+
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700");
+/* line 3, ../assets/sass/partials/_custom-type.scss */
+
+
+
+
+
+
+/* line 65, ../assets/sass/partials/_custom-type.scss */
+.opacity {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  /* For IE8 and earlier */
+}
+
+/* line 82, ../assets/sass/partials/_custom-type.scss */
+.transform-origin-top-left {
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+/* line 99, ../assets/sass/partials/_custom-type.scss */
+.box-shadow {
+  -webkit-box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* line 104, ../assets/sass/partials/_custom-type.scss */
+.box-shadow-blur {
+  -webkit-box-shadow: 0 23px 46px 0 rgba(78, 56, 90, 0.08);
+  box-shadow: 0 23px 46px 0 rgba(78, 56, 90, 0.08);
+}
+
+
+
+
+/* line 126, ../assets/sass/partials/_custom-type.scss */
+.no-underline, a, .menu-group a, .language ul li:hover, a.btn:hover {
+    text-decoration: none;
+  }
+  
+  /* line 130, ../assets/sass/partials/_custom-type.scss */
+  .underline, a:hover {
+    text-decoration: underline;
+  }
+  
+  /* line 134, ../assets/sass/partials/_custom-type.scss */
+  .pointer, a, .language ul, .btn, a.btn, .gamengine-form .checkbox-options .box-holder, .gamengine-form .checkbox-options .box-holder input[type="checkbox"], .custom-select {
+    cursor: pointer;
+  }
+  
+  /* line 138, ../assets/sass/partials/_custom-type.scss */
+  .default {
+    cursor: default;
+  }
+  
+  /* line 142, ../assets/sass/partials/_custom-type.scss */
+  .break-word {
+    word-break: keep-all;
+    word-wrap: break-word;
+  }
+  
+  /* line 147, ../assets/sass/partials/_custom-type.scss */
+  .no-wrap {
+    white-space: nowrap;
+  }
+  
+  /* line 151, ../assets/sass/partials/_custom-type.scss */
+  .clearfix {
+    clear: both;
+  }
+  
+  /* line 155, ../assets/sass/partials/_custom-type.scss */
+  .uppercase, .header-menu, .menu-group .button .btn, .btn, a.btn, .gamengine-form label {
+    text-transform: uppercase;
+  }
+  
+  /* line 159, ../assets/sass/partials/_custom-type.scss */
+  .lowercase {
+    text-transform: lowercase;
+  }
+  
+  /* line 163, ../assets/sass/partials/_custom-type.scss */
+  .initialcase, .gamengine-form .checkbox-options label {
+    text-transform: initial;
+  }
+  
+  /* line 167, ../assets/sass/partials/_custom-type.scss */
+  .flex-item-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* line 173, ../assets/sass/partials/_custom-type.scss */
+  .flex-space-between {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* line 178, ../assets/sass/partials/_custom-type.scss */
+  .object-fit-cover {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* line 184, ../assets/sass/partials/_custom-type.scss */
+  .ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  
+  /* line 192, ../assets/sass/partials/_custom-type.scss */
+  .hide {
+    display: none;
+  }
+  
+  /* line 196, ../assets/sass/partials/_custom-type.scss */
+  .highlight {
+    color: #42EB90;
+  }
+  
+  /* line 200, ../assets/sass/partials/_custom-type.scss */
+  .center {
+    text-align: center;
+  }
+  
+  /* line 204, ../assets/sass/partials/_custom-type.scss */
+  .container-maxWidth-center, .gamengine, .message-top__beware {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+  
+  /* line 209, ../assets/sass/partials/_custom-type.scss */
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* line 217, ../assets/sass/partials/_custom-type.scss */
+  .dot-list {
+    margin-left: 20px;
+    list-style: disc;
+  }
+  /* line 220, ../assets/sass/partials/_custom-type.scss */
+  .dot-list li {
+    margin-bottom: 9px;
+  }
+  
+  /* line 224, ../assets/sass/partials/_custom-type.scss */
+  .num-list {
+    list-style: decimal;
+    margin: 0 0 30px 30px;
+  }
+  
+  
+  
+  /* line 39, ../assets/sass/partials/_typography.scss */
+  .headline, .section-title {
+    font-weight: 600;
+    font-size: 30px;
+  }
+  /* line 42, ../assets/sass/partials/_typography.scss */
+  .headline i, .section-title i {
+    font-style: normal;
+    font-size: 39px;
+  }
+  
+  /* line 48, ../assets/sass/partials/_typography.scss */
+  .paragraph-title {
+    font-size: 30px;
+    color: #3B4AFF;
+    text-align: center;
+  }
+  
+  /* line 54, ../assets/sass/partials/_typography.scss */
+  .section-title {
+    color: #3B4AFF;
+    margin-bottom: 30px;
+  }
+  /* line 59, ../assets/sass/partials/_typography.scss */
+  .section-title .subtitle {
+    display: block;
+    font-size: 30px;
+    padding-top: 15px;
+  }
+  
+
+  
+  /* line 72, ../assets/sass/partials/_typography.scss */
+  .Raleway, .gamengine-form label, .gamengine-form .note, .gamengine-form .checkbox-options label, .custom-select {
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  /* line 77, ../assets/sass/partials/_typography.scss */
+  .Alegreya-sans-sc, h1, .header-menu, .menu-group .button .btn {
+    font-family: 'Alegreya Sans SC', sans-serif;
+  }
+  
+  /* line 81, ../assets/sass/partials/_typography.scss */
+  .Montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* line 85, ../assets/sass/partials/_typography.scss */
+  .line-height-large {
+    line-height: 2;
+  }
+  
+  /* line 89, ../assets/sass/partials/_typography.scss */
+  .line-height-regular {
+    line-height: 1.5;
+  }
+  
+  /* line 93, ../assets/sass/partials/_typography.scss */
+  .line-height-small, .home-top p {
+    line-height: 1.2;
+  }
+  
+  /* line 97, ../assets/sass/partials/_typography.scss */
+  .italic {
+    font-style: italic;
+  }
+  
+  /* line 101, ../assets/sass/partials/_typography.scss */
+  .xsmall {
+    font-size: 15px;
+  }
+  
+  /* line 105, ../assets/sass/partials/_typography.scss */
+  .text-reqular-18, .gamengine-form .note, .gamengine-form .checkbox-options label, .custom-select {
+    font-size: 18px;
+  }
+  
+  /* line 110, ../assets/sass/partials/_typography.scss */
+  .text-bold-12, .gamengine-form label {
+    font-size: 12px;
+  }
+  
+  /* line 115, ../assets/sass/partials/_typography.scss */
+  .light {
+    font-weight: 300;
+  }
+  
+  /* line 119, ../assets/sass/partials/_typography.scss */
+  .reqular, .text-reqular-18, .gamengine-form .note, .gamengine-form .checkbox-options label, .custom-select {
+    font-weight: 400;
+  }
+  
+  /* line 123, ../assets/sass/partials/_typography.scss */
+  .medium {
+    font-weight: 500;
+  }
+  
+  /* line 127, ../assets/sass/partials/_typography.scss */
+  .semi-bold {
+    font-weight: 600;
+  }
+  
+  /* line 131, ../assets/sass/partials/_typography.scss */
+  .bold, .text-bold-12, .gamengine-form label {
+    font-weight: 700;
+  }
+  
+  /* line 1, ../assets/sass/partials/_layout.scss */
+ 
+  
+  /* line 26, ../assets/sass/partials/_layout.scss */
+  .gamengine {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  /* line 36, ../assets/sass/partials/_layout.scss */
+  .top__social-media {
+    background: #8B8B8B;
+    padding: 18px 185px 18px 0;
+    color: white;
+    font-size: 20px;
+  }
+  /* line 41, ../assets/sass/partials/_layout.scss */
+  .top__social-media ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+  /* line 45, ../assets/sass/partials/_layout.scss */
+  .top__social-media li {
+    margin-right: 26px;
+  }
+  /* line 48, ../assets/sass/partials/_layout.scss */
+  .top__social-media .fab {
+    width: 20px;
+  }
+  
+  /* line 53, ../assets/sass/partials/_layout.scss */
+  .content-wrapper {
+    padding: 280px 0 0 0;
+  }
+  
+  /* line 57, ../assets/sass/partials/_layout.scss */
+  .page-content {
+    padding: 60px 210px;
+  }
+  
+  /* line 64, ../assets/sass/partials/_layout.scss */
+  
+  
+  /* line 195, ../assets/sass/partials/_layout.scss */
+  
+  /* line 4, ../assets/sass/partials/_form.scss */
+  input[type="email"], input[type="text"] {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    background: transparent;
+    box-shadow: inset 0 0 0px 0px #888;
+    padding: 15px 0 15px 15px;
+    border: solid 1px #3B4AFF;
+    font-size: inherit;
+    font-family: inherit;
+    height: 50px;
+  }
+  
+  /* line 15, ../assets/sass/partials/_form.scss */
+  input, button, textarea {
+    outline: 0;
+  }
+  
+  /* line 19, ../assets/sass/partials/_form.scss */
+  textarea {
+    resize: none;
+    font-size: inherit;
+  }
+  
+  /* line 38, ../assets/sass/partials/_custom-type.scss */
+  ::-webkit-input-placeholder {
+    font-size: 18px;
+    font-family: inherit;
+    color: #3B4AFF;
+  }
+  
+  /* line 41, ../assets/sass/partials/_custom-type.scss */
+  :-moz-placeholder {
+    font-size: 18px;
+    font-family: inherit;
+    color: #3B4AFF;
+  }
+  
+  /* line 44, ../assets/sass/partials/_custom-type.scss */
+  ::-moz-placeholder {
+    font-size: 18px;
+    font-family: inherit;
+    color: #3B4AFF;
+  }
+  
+  /* line 47, ../assets/sass/partials/_custom-type.scss */
+  :-ms-input-placeholder {
+    font-size: 18px;
+    font-family: inherit;
+    color: #3B4AFF;
+  }
+  
+
+  
+ 
+  
+  /* line 4, ../assets/sass/modules/_pages.scss */
+  .message-top__beware {
+    display: flex;
+    align-items: center;
+    background: #2FE6ED;
+    padding: 39px 306px 30px 306px;
+    color: #000A88;
+    fill: #000A88;
+  }
+  /* line 12, ../assets/sass/modules/_pages.scss */
+  .message-top__beware.hidden {
+    /* animation: scroll-hide 3s 1;
+    animation-direction: alternate; */
+    /* transition: all .3s ease; */
+  }
+  /* line 19, ../assets/sass/modules/_pages.scss */
+  .message-top__beware .ic-warning {
+    width: 84px;
+    height: 58px;
+  }
+  /* line 23, ../assets/sass/modules/_pages.scss */
+  .message-top__beware .col1 {
+    padding: 0 26px 0 0;
+  }
+  
+  @keyframes scroll-hide {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(160px);
+    }
+  }
+  /* @keyframes scroll-show {
+    0% {
+      transform: translateY(160px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  } */
+  /* line 47, ../assets/sass/modules/_pages.scss */
+  .section-top {
+    position: relative;
+  }
+  
+  /* line 51, ../assets/sass/modules/_pages.scss */
+  .home-top {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0px;
+    padding: 88px 210px;
+    display: flex;
+    color: white;
+    /*   background: url(../img/GE_Landing_bgd.png) no-repeat;
+      background-size: 100% 100%;
+     */
+    background: #3b4aff;
+    background: -moz-linear-gradient(left, #3b4aff 0%, #2fe6ed 100%);
+    background: -webkit-linear-gradient(left, #3b4aff 0%, #2fe6ed 100%);
+    background: linear-gradient(to right, #3b4aff 0%, #2fe6ed 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b4aff', endColorstr='#2fe6ed',GradientType=1 );
+  }
+  /* line 74, ../assets/sass/modules/_pages.scss */
+  .home-top .col1 {
+    width: 58.33333%;
+  }
+  /* line 77, ../assets/sass/modules/_pages.scss */
+  .home-top .col2 {
+    width: 41.66667%;
+    text-align: center;
+  }
+  
+  /* line 83, ../assets/sass/modules/_pages.scss */
+  .home-headline {
+    font-weight: 400;
+    color: white;
+    width: 91.66667%;
+  }
+  
+  /* line 90, ../assets/sass/modules/_pages.scss */
+  .home-gamengine-pic img {
+    width: 440px;
+  }
+  
+  /* line 95, ../assets/sass/modules/_pages.scss */
+  .sign-up {
+    margin: 0 auto;
+    max-width: 650px;
+    text-align: center;
+    font-size: 30px;
+  }
+  /* line 100, ../assets/sass/modules/_pages.scss */
+  .sign-up input[type="email"] {
+    width: 280px;
+  }
+  
+  /* line 105, ../assets/sass/modules/_pages.scss */
+  .form-sign-up {
+    margin-top: 60px;
+  }
+  
+  /* line 112, ../assets/sass/modules/_pages.scss */
+  .content-header-bg {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0px;
+    padding: 280px 210px 0 210px;
+    height: 240px;
+    background: #3b4aff;
+    background: -moz-linear-gradient(45deg, #3b4aff 0%, #42eb90 100%);
+    background: -webkit-linear-gradient(45deg, #3b4aff 0%, #42eb90 100%);
+    background: linear-gradient(45deg, #3b4aff 0%, #42eb90 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b4aff', endColorstr='#42eb90',GradientType=1 );
+  }
+  
+  /* line 128, ../assets/sass/modules/_pages.scss */
+  .canvas-coming-soon {
+    height: calc(100vh - 550px);
+  }
+  
+  /* line 132, ../assets/sass/modules/_pages.scss */
+  .coming-soon .note {
+    margin-bottom: 36px;
+  }
+  /* line 136, ../assets/sass/modules/_pages.scss */
+  .coming-soon .section-title .divider-bar {
+    width: 168px;
+    margin: 36px auto 0 auto;
+  }
+  
+  /* line 143, ../assets/sass/modules/_pages.scss */
+  .divider-bar {
+    display: block;
+    background: #42EB90;
+    height: 3px;
+  }
+  
+  /* line 151, ../assets/sass/modules/_pages.scss */
+  .gamengine-form {
+    max-width: 585px;
+    text-align: left;
+  }
+  /* line 154, ../assets/sass/modules/_pages.scss */
+  .gamengine-form label {
+    display: block;
+    color: #3B4AFF;
+  }
+  /* line 159, ../assets/sass/modules/_pages.scss */
+  .gamengine-form input[type="text"], .gamengine-form input[type="email"] {
+    width: 100%;
+  }
+  /* line 162, ../assets/sass/modules/_pages.scss */
+  .gamengine-form .note {
+    margin: 30px 0 0 0;
+  }
+  /* line 166, ../assets/sass/modules/_pages.scss */
+  .gamengine-form .button {
+    margin-top: 48.6px;
+  }
+  /* line 171, ../assets/sass/modules/_pages.scss */
+  .gamengine-form .checkbox-options label {
+    display: inline-block;
+    color: black;
+    margin-top: 10px;
+    padding-left: 35px;
+  }
+  /* line 178, ../assets/sass/modules/_pages.scss */
+  .gamengine-form .checkbox-options .box-holder {
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  /* line 185, ../assets/sass/modules/_pages.scss */
+  .gamengine-form .checkbox-options .box-holder input[type="checkbox"] {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    /* For IE8 and earlier */
+  }
+  /* line 189, ../assets/sass/modules/_pages.scss */
+  .gamengine-form .checkbox-options .box-holder input:checked ~ .checkmark {
+    background: #EFF2FF;
+    border: solid 1px #3B4AFF;
+  }
+  /* line 193, ../assets/sass/modules/_pages.scss */
+  .gamengine-form .checkbox-options .box-holder input:checked ~ .checkmark:after {
+    display: block;
+  }
+  /* line 197, ../assets/sass/modules/_pages.scss */
+  .gamengine-form .checkbox-options .checkmark {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: solid 1px #3B4AFF;
+  }
+  /* line 205, ../assets/sass/modules/_pages.scss */
+  .gamengine-form .checkbox-options .checkmark:after {
+    display: none;
+    content: "\2713";
+    width: 25px;
+    height: 25px;
+    text-align: center;
+  }
+  
+  /* line 218, ../assets/sass/modules/_pages.scss */
+  .custom-select {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+    border: solid 1px #3B4AFF;
+    height: 50px;
+  }
+  /* line 224, ../assets/sass/modules/_pages.scss */
+  .custom-select .fa-angle-down {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 16px;
+    color: #3B4AFF;
+  }
+  /* line 231, ../assets/sass/modules/_pages.scss */
+  .custom-select select {
+    display: none;
+  }
+  /* line 234, ../assets/sass/modules/_pages.scss */
+  .custom-select .select-selected {
+    height: 100%;
+    padding: 10px 0 0 30px;
+  }
+  /* line 238, ../assets/sass/modules/_pages.scss */
+  .custom-select .select-selected:after {
+    -ms-transform: rotate(180deg);
+    /* IE 9 */
+    -webkit-transform: rotate(180deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+    position: absolute;
+  }
+  /* line 243, ../assets/sass/modules/_pages.scss */
+  .custom-select .select-selected.select-arrow-active:after {
+    position: absolute;
+  }
+  
+  /* line 250, ../assets/sass/modules/_pages.scss */
+  .select-items div {
+    color: black;
+    background: white;
+    border: solid 1px #3B4AFF;
+    padding: 10px 0 0 30px;
+    height: 50px;
+  }
+  /* line 256, ../assets/sass/modules/_pages.scss */
+  .select-items div:hover {
+    background-color: #EFF2FF;
+  }
+  
+  /* line 261, ../assets/sass/modules/_pages.scss */
+  .select-hide {
+    display: none;
+  }
+  
+  /* line 271, ../assets/sass/modules/_pages.scss */
+  .our-team .paragraph-title {
+    margin: 0 0 40px 0;
+  }
+  /* line 275, ../assets/sass/modules/_pages.scss */
+  .our-team .row {
+    padding: 39px 400px;
+    margin: 0 -210px;
+    /*     &:nth-child(even) {
+          background: $brand-light-blue;
+        }*/
+  }
+  /* line 278, ../assets/sass/modules/_pages.scss */
+  .our-team .row:nth-child(1) {
+    padding-top: 0;
+  }
+  /* line 284, ../assets/sass/modules/_pages.scss */
+  .our-team .row.about-us {
+    background: #EFF2FF;
+  }
+  /* line 287, ../assets/sass/modules/_pages.scss */
+  .our-team .row.advisors {
+    background: #F2FFFF;
+  }
+  /* line 293, ../assets/sass/modules/_pages.scss */
+  .our-team .advisors .paragraph-title, .our-team .advisors .name, .our-team .advisors .name .linkedin a {
+    color: #2FE6ED;
+  }
+  /* line 298, ../assets/sass/modules/_pages.scss */
+  .our-team .advisors .team-profile .col1, .our-team .advisors .advisors-profile .col1 {
+    margin-left: 60px;
+    margin-right: 0;
+  }
+  /* line 305, ../assets/sass/modules/_pages.scss */
+  .our-team .name {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-weight: 700;
+    /*     .divider-bar {
+          margin-top: $gutter*1.5;
+        } */
+  }
+  /* line 314, ../assets/sass/modules/_pages.scss */
+  .our-team .name .linkedin {
+    position: relative;
+    height: 27px;
+    vertical-align: bottom;
+    color: #3B4AFF;
+    border-left: solid 2px black;
+    padding-left: 21px;
+    margin-left: 19.5px;
+  }
+  /* line 322, ../assets/sass/modules/_pages.scss */
+  .our-team .name .linkedin a {
+    position: absolute;
+    top: -2px;
+  }
+  
+  /* line 331, ../assets/sass/modules/_pages.scss */
+  .team-profile, .advisors-profile {
+    display: flex;
+  }
+  /* line 333, ../assets/sass/modules/_pages.scss */
+  .team-profile .col1, .advisors-profile .col1 {
+    width: 542px;
+    margin-right: 60px;
+  }
+  /* line 337, ../assets/sass/modules/_pages.scss */
+  .team-profile .col2, .advisors-profile .col2 {
+    max-width: 500px;
+  }
+  
+  /* line 342, ../assets/sass/modules/_pages.scss */
+  .team-profile__img {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  /* line 345, ../assets/sass/modules/_pages.scss */
+  .team-profile__img li {
+    width: 170px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+  }
+  /* line 349, ../assets/sass/modules/_pages.scss */
+  .team-profile__img li:nth-child(3n+0) {
+    margin-right: 0;
+  }
+  /* line 353, ../assets/sass/modules/_pages.scss */
+  .team-profile__img img {
+    width: 170px;
+    height: 170px;
+    display: block;
+  }
+  
+  /* line 360, ../assets/sass/modules/_pages.scss */
+  .advisors-profile {
+    flex-direction: row-reverse;
+  }
+  
+  /* line 366, ../assets/sass/modules/_pages.scss */
+  .ui-tabs-active img {
+    border: solid 2px #42EB90;
+  }
+  
+  /* line 371, ../assets/sass/modules/_pages.scss */
+  .title-partners-investors {
+    margin-top: 100px;
+  }
+  
+  /* line 376, ../assets/sass/modules/_pages.scss */
+  .bitmark-investors ul, .bitmark-partners ul {
+    display: flex;
+    align-items: center;
+  }
+  /* line 380, ../assets/sass/modules/_pages.scss */
+  .bitmark-investors ul li, .bitmark-partners ul li {
+    text-align: center;
+  }
+  
+  /* line 385, ../assets/sass/modules/_pages.scss */
+  .bitmark-investors {
+    margin-bottom: 72px;
+  }
+  /* line 387, ../assets/sass/modules/_pages.scss */
+  .bitmark-investors li {
+    margin-right: 125px;
+  }
+  /* line 389, ../assets/sass/modules/_pages.scss */
+  .bitmark-investors li:last-child {
+    margin-right: 0;
+  }
+  /* line 393, ../assets/sass/modules/_pages.scss */
+  .bitmark-investors li:nth-child(1) img {
+    width: 216px;
+  }
+  /* line 398, ../assets/sass/modules/_pages.scss */
+  .bitmark-investors li:nth-child(2) img {
+    width: 175px;
+  }
+  /* line 403, ../assets/sass/modules/_pages.scss */
+  .bitmark-investors li:nth-child(3) img {
+    width: 125px;
+  }
+  /* line 408, ../assets/sass/modules/_pages.scss */
+  .bitmark-investors li:nth-child(4) img {
+    width: 273px;
+  }
+  
+  /* line 416, ../assets/sass/modules/_pages.scss */
+  .bitmark-partners li {
+    margin-right: 165px;
+  }
+  /* line 418, ../assets/sass/modules/_pages.scss */
+  .bitmark-partners li:last-child {
+    margin-right: 0;
+  }
+  /* line 422, ../assets/sass/modules/_pages.scss */
+  .bitmark-partners li:nth-child(1) img {
+    height: 44px;
+  }
+  /* line 427, ../assets/sass/modules/_pages.scss */
+  .bitmark-partners li:nth-child(2) img {
+    height: 41px;
+  }
+  /* line 432, ../assets/sass/modules/_pages.scss */
+  .bitmark-partners li:nth-child(3) img {
+    height: 40px;
+  }
+  /* line 437, ../assets/sass/modules/_pages.scss */
+  .bitmark-partners li:nth-child(4) img {
+    height: 70px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    /* line 50, ../assets/sass/modules/_responsive.scss */
+    body {
+      font-size: 10px;
+    }
+  
+    /* line 56, ../assets/sass/modules/_responsive.scss */
+    .content-header-bg {
+      padding: 150px 15px 0 15px;
+      height: 105px;
+    }
+  
+    /* line 61, ../assets/sass/modules/_responsive.scss */
+    .top__social-media {
+      padding-right: 0;
+    }
+  
+    /* line 65, ../assets/sass/modules/_responsive.scss */
+    .menu-group .menu-item {
+      display: block;
+      margin-right: 0;
+    }
+    /* line 68, ../assets/sass/modules/_responsive.scss */
+    .menu-group .menu-item a, .menu-group .menu-item .btn {
+      width: 320px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background: #02ECB7;
+      padding-right: 30px;
+      height: 30px;
+    }
+    /* line 76, ../assets/sass/modules/_responsive.scss */
+    .menu-group .menu-item a:hover, .menu-group .menu-item .btn:hover {
+      text-decoration: none;
+    }
+    /* line 82, ../assets/sass/modules/_responsive.scss */
+    .menu-group .button .btn {
+      border: 0;
+      padding: 0 30px 0 0;
+      width: 320px;
+      font-size: 16px;
+    }
+  
+    /* line 90, ../assets/sass/modules/_responsive.scss */
+    .main-header {
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-right: 0;
+      padding-bottom: 20px;
+    }
+    /* line 96, ../assets/sass/modules/_responsive.scss */
+    .main-header .col2 {
+      padding-right: 30px;
+    }
+  
+    /* line 100, ../assets/sass/modules/_responsive.scss */
+    .hambuger {
+      display: block;
+    }
+    /* line 102, ../assets/sass/modules/_responsive.scss */
+    .hambuger .close-menu {
+      display: none;
+    }
+    /* line 106, ../assets/sass/modules/_responsive.scss */
+    .hambuger.open .mb-menu {
+      display: none;
+    }
+    /* line 109, ../assets/sass/modules/_responsive.scss */
+    .hambuger.open .close-menu {
+      display: block;
+    }
+  
+    /* line 114, ../assets/sass/modules/_responsive.scss */
+    .language {
+      position: relative;
+      width: 320px;
+    }
+    /* line 117, ../assets/sass/modules/_responsive.scss */
+    .language ul {
+      top: 0px;
+      left: 0;
+      width: 320px;
+      background: #02ECB7;
+    }
+    /* line 122, ../assets/sass/modules/_responsive.scss */
+    .language ul.open {
+      height: 210px;
+    }
+    /* line 127, ../assets/sass/modules/_responsive.scss */
+    .language ul li:first-child, .language ul li:first-child:hover {
+      background: #02ECB7;
+    }
+  
+    /* line 133, ../assets/sass/modules/_responsive.scss */
+    .header-menu {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 134px;
+      width: 320px;
+      text-align: right;
+    }
+    /* line 140, ../assets/sass/modules/_responsive.scss */
+    .header-menu.open {
+      display: block;
+    }
+  
+    /* line 145, ../assets/sass/modules/_responsive.scss */
+    .logo {
+      margin-left: -10px;
+    }
+    /* line 147, ../assets/sass/modules/_responsive.scss */
+    .logo img {
+      width: 180px;
+    }
+  
+    /* line 153, ../assets/sass/modules/_responsive.scss */
+    footer {
+      padding: 20px 15px 0 15px;
+      font-size: 10px;
+      height: 200px;
+    }
+  
+    /* line 160, ../assets/sass/modules/_responsive.scss */
+    .footer-menu .items {
+      display: block;
+      position: relative;
+      width: 260px;
+    }
+    /* line 165, ../assets/sass/modules/_responsive.scss */
+    .footer-menu .main-item {
+      margin-right: 0;
+    }
+    /* line 167, ../assets/sass/modules/_responsive.scss */
+    .footer-menu .main-item:nth-child(1) {
+      position: absolute;
+      right: 0;
+    }
+    /* line 177, ../assets/sass/modules/_responsive.scss */
+    .footer-menu .main-item:nth-child(3) span {
+      display: none;
+    }
+    /* line 179, ../assets/sass/modules/_responsive.scss */
+    .footer-menu .main-item span {
+      margin-bottom: 0;
+    }
+  
+    /* line 186, ../assets/sass/modules/_responsive.scss */
+    .content-wrapper {
+      padding: 30px 15px 90px 15px;
+    }
+  
+    /* line 190, ../assets/sass/modules/_responsive.scss */
+    h1 {
+      font-size: 40px;
+    }
+  
+    /* line 195, ../assets/sass/modules/_responsive.scss */
+    .message-top__beware {
+      padding: 15px 30px;
+      font-size: 10px;
+      font-weight: 500;
+    }
+    /* line 200, ../assets/sass/modules/_responsive.scss */
+    .message-top__beware .ic-warning {
+      width: 37px;
+      height: 31px;
+    }
+  
+    /* line 206, ../assets/sass/modules/_responsive.scss */
+    .home-top {
+      padding: 160px 25px 0 25px;
+      height: 740px;
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+    }
+    /* line 211, ../assets/sass/modules/_responsive.scss */
+    .home-top .col1, .home-top .col2 {
+      width: auto;
+    }
+    /* line 214, ../assets/sass/modules/_responsive.scss */
+    .home-top p {
+      font-size: 10px;
+    }
+  
+    /* line 220, ../assets/sass/modules/_responsive.scss */
+    .home-gamengine-pic img {
+      width: 192px;
+    }
+  
+    /* line 225, ../assets/sass/modules/_responsive.scss */
+    .headline, .section-title {
+      font-size: 16px;
+    }
+    /* line 227, ../assets/sass/modules/_responsive.scss */
+    .headline i, .section-title i {
+      font-size: 22px;
+    }
+  
+    /* line 232, ../assets/sass/modules/_responsive.scss */
+    .home-headline {
+      width: auto;
+    }
+  
+    /* line 236, ../assets/sass/modules/_responsive.scss */
+    .sign-up {
+      font-size: 10px;
+    }
+  
+    /* line 241, ../assets/sass/modules/_responsive.scss */
+    
+  
+    /*   .form-sign-up {
+      display: block;
+      .col2 {
+        margin-top: $gutter;
+      }
+    }
+     */
+    /* line 253, ../assets/sass/modules/_responsive.scss */
+    .canvas-coming-soon {
+      height: auto;
+    }
+  
+    /* line 258, ../assets/sass/modules/_responsive.scss */
+    .our-team {
+      text-align: center;
+    }
+    /* line 260, ../assets/sass/modules/_responsive.scss */
+    .our-team .row {
+      padding: 60px 30px;
+      margin: 0px -15px;
+    }
+    /* line 267, ../assets/sass/modules/_responsive.scss */
+    .our-team .name .linkedin a {
+      top: 2px;
+    }
+    /* line 275, ../assets/sass/modules/_responsive.scss */
+    .our-team .advisors .team-profile .col1, .our-team .advisors .advisors-profile .col1 {
+      margin-left: 0;
+    }
+  
+   
+    /* line 287, ../assets/sass/modules/_responsive.scss */
+    .team-profile, .advisors-profile {
+      flex-direction: column;
+    }
+    /* line 289, ../assets/sass/modules/_responsive.scss */
+    .team-profile .col1, .advisors-profile .col1, .team-profile .col2, .advisors-profile .col2 {
+      max-width: 260px;
+      margin-right: 0;
+    }
+  
+    /* line 296, ../assets/sass/modules/_responsive.scss */
+    .team-profile__img li {
+      width: calc(33.3333% - 15px);
+      margin-right: 15px;
+      margin-bottom: 15px;
+    }
+    /* line 301, ../assets/sass/modules/_responsive.scss */
+    .team-profile__img img {
+      width: 100%;
+      height: auto;
+    }
+  
+    /* line 307, ../assets/sass/modules/_responsive.scss */
+    .title-partners-investors {
+      margin-top: 0;
+    }
+  
+    /* line 312, ../assets/sass/modules/_responsive.scss */
+    .bitmark-investors ul, .bitmark-partners ul {
+      flex-wrap: wrap;
+    }
+    /* line 315, ../assets/sass/modules/_responsive.scss */
+    .bitmark-investors ul li, .bitmark-partners ul li {
+      margin-right: 15px;
+      margin-bottom: 30px;
+      width: calc(50% - 7.5px);
+    }
+    /* line 319, ../assets/sass/modules/_responsive.scss */
+    .bitmark-investors ul li:nth-child(2n+0), .bitmark-partners ul li:nth-child(2n+0) {
+      margin-right: 0;
+    }
+    /* line 322, ../assets/sass/modules/_responsive.scss */
+    .bitmark-investors ul li img, .bitmark-partners ul li img {
+      width: 100% !important;
+      height: auto !important;
+    }
+
+
+    .text-wrapper {
+      padding: 60px 210px;
+    }
+
+
+    .left {
+      padding-left: 70px;
+    }
+
+    blockquote {
+      padding-left: 60px;
+    } 
+
+
+  }
+  

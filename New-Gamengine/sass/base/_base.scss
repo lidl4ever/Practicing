@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit ;
+}
+
+  /* line 30, ../assets/sass/partials/_form.scss */
+label {
+  margin: 30px 0 10px 0;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font: 400 18px "Montserrat", sans-serif;
+  line-height: 1.5;
+  color: #000000;
+}
+
+/* line 11, ../assets/sass/partials/_custom-type.scss */
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  padding-bottom: 60px;
+}
+
+/* line 111, ../assets/sass/partials/_custom-type.scss */
+a {
+    color: #3B4AFF;
+    outline: 0;
+  }
+  
+  /* line 120, ../assets/sass/partials/_custom-type.scss */
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    position: relative;
+    min-height: 100%;
+    height: 100%;
+  }
+  
+
+
+
+  
+
+body, button {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+}

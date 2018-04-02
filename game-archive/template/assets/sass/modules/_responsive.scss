@@ -1,0 +1,332 @@
+
+//
+// Mobile and iPad
+//
+
+// @include respond-to (tablets) {
+//   header {
+//     left: $canvas-inner-space/3;
+//     right: $canvas-inner-space/3;
+//   }
+
+//   footer {
+//     padding: 0 $canvas-inner-space/3;
+//   }
+
+//   .content-wrapper {
+//     padding: $gutter*3 $canvas-inner-space/3 $gutter*3 $canvas-inner-space/3;
+//   }
+
+//   .content-header-bg {
+//     padding: 280px $canvas-inner-space/3 0 $canvas-inner-space/3;
+//   }
+
+
+//   // Home
+//   .home-top {
+//     padding: 350px $canvas-inner-space/3 0 $canvas-inner-space/3;
+//     height: 1200px;
+//   }
+
+//   // Our team
+//   .our-team {
+//     .row {
+//       padding: $gutter*2 ((230px / 4) + $canvas-inner-space/3);
+//       margin:0px (-($canvas-inner-space/3));
+//     }
+//   }
+
+//   .team-profile__img {
+//     img {
+//       width: 110px;
+//       height: auto;
+//     }
+//   }
+
+// //
+// }
+
+@include respond-to (mobile) {
+  body {
+    font-size: $font-size-xxxsmall;
+  }
+  header {
+  }
+
+  .content-header-bg {
+    padding: 150px $gutter/2 0 $gutter/2;
+    height: 105px;
+  }
+
+  .top__social-media {
+    padding-right: 0;
+  }
+  .menu-group {
+    .menu-item {
+      display: block;
+      margin-right: 0;
+      a, .btn {
+        width: 320px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background: $color-green;
+        padding-right: $gutter;
+        height: 30px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+    }
+    .button .btn {
+      border: 0;
+      padding: 0 $gutter 0 0;
+      width: 320px;
+      font-size: $font-size-small;
+    }
+  }
+
+  .main-header {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 0;
+    padding-bottom:20px;
+
+    .col2 {
+      padding-right: $gutter;
+    }
+  }
+  .hambuger {
+    display: block;
+    .close-menu {
+      display: none;
+    }
+    &.open {
+      .mb-menu {
+        display: none;
+      }
+      .close-menu {
+        display: block;
+      }
+    }
+  }
+  .language {
+    position: relative;
+    width: 320px;
+    ul {
+      top: 0px;
+      left: 0;
+      width: 320px;
+      background: $color-green;
+      &.open {
+        height: 30px * 7;
+      }
+    }
+    ul li {
+      &:first-child, &:first-child:hover {
+        background: $color-green;
+      }
+    }
+  }
+
+  .header-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 134px;
+    width: 320px;
+    text-align: right;
+    &.open {
+      display: block;
+    }
+  }
+
+  .logo {
+    margin-left: -10px;
+    img {
+      width: 180px;
+    }
+  }
+
+  // Footer
+  footer {
+    padding: $gutter/1.5 $gutter/2 0 $gutter/2;
+    font-size: $font-size-xxxsmall;
+    height: 200px;
+  }
+
+  .footer-menu {
+    .items {
+      display: block;
+      position: relative;
+      width: 260px;
+    }
+    .main-item {
+      margin-right: 0;
+      &:nth-child(1) {
+        position: absolute;
+        right: 0;
+        //float: right;
+      }
+      &:nth-child(2) {
+        //float: left;
+      }
+      &:nth-child(3) {
+        //float: left;
+        span {display: none}
+      }
+      span {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Layout
+  .content-wrapper {
+    padding: $gutter $gutter/2 $gutter*3 $gutter/2;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  // Home
+  .message-top__beware {
+    padding: $gutter/2 $gutter;
+    font-size: 10px;
+    font-weight: 500;
+
+    .ic-warning {
+      width: 37px;
+      height: 31px;
+    }
+
+  }
+  .home-top {
+    padding: 160px 25px 0 25px;
+    height: 740px;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    .col1, .col2 {
+      width: auto;
+    }
+    p {
+      font-size: $font-size-xxxsmall;
+    }
+  }
+
+  .home-gamengine-pic {
+    img {
+      width: 192px;
+    }
+  }
+
+  .headline, .section-title {
+    font-size: 16px;
+    i {
+      font-size: 22px;
+    }
+  }
+
+  .home-headline {
+    width: auto;
+  }
+
+  .sign-up {
+    font-size: $font-size-xxxsmall;
+  }
+
+  // Form
+  .btn {
+    font-size: $font-size-xxxsmall;
+  }
+
+/*   .form-sign-up {
+  display: block;
+  .col2 {
+    margin-top: $gutter;
+  }
+}
+ */
+  // Coming soon
+  .canvas-coming-soon {
+    height: auto;
+  }
+
+  // Our team
+  .our-team {
+    text-align: center;
+    .row {
+      padding: $gutter*2 ($gutter/2 + $gutter/2);
+      margin:0px (-($gutter/2));
+    }
+
+    .name {
+      .linkedin {
+        a {
+          top: 2px;
+        }
+      }
+    }
+
+    .advisors {
+      .team-profile {
+        .col1 {
+          margin-left: 0;
+        }
+      }
+    }
+
+  }
+
+  h2 {
+    font-size: $font-size-large;
+  }
+
+  .team-profile {
+    flex-direction: column;
+    .col1, .col2 {
+      max-width: 260px;
+      margin-right: 0;
+    }
+  }
+
+  .team-profile__img {
+    li {
+      width: calc(33.3333% - 15px);
+      margin-right: $gutter/2;
+      margin-bottom: $gutter/2;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .title-partners-investors {
+    margin-top: 0;
+  }
+
+  .bitmark-investors, .bitmark-partners {
+    ul {
+      flex-wrap: wrap;
+    }
+    ul li {
+      margin-right: $gutter/2;
+      margin-bottom: $gutter;
+      width: calc(50% - 7.5px);
+      &:nth-child(2n+0){
+        margin-right: 0;
+      }
+      img {
+        width: 100% !important;
+        height: auto !important;
+      }
+    }
+  }
+
+//
+}
+//End: mobile
+

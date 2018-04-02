@@ -1,0 +1,60 @@
+
+//== Color
+//
+//
+
+$brand-primary:                 #3B4AFF;
+$brand-secondary:               #42EB90;
+$brand-dark-blue:               #000A88;
+$brand-light-blue:              #EFF2FF;
+
+$color-black:                   #000000;
+$color-white:                   #ffffff;
+$color-gray:                    #8B8B8B;
+$color-green:                   #02ECB7;
+$color-light-green:             #F2FFFF;
+$color-blue-green:              #2FE6ED;
+$color-bg-hover:                #81eece;
+
+
+$color-base:                    $color-black;
+
+
+//Grid
+//
+//
+$max-width:                     1920px;
+$full-width:                    100%;
+$grid-numbers:                  12;
+$gutter:                        30px;
+$grid:                          ($full-width / $grid-numbers); // %
+$canvas-inner-space:            210px;
+
+
+//
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-raleway: 'Raleway', sans-serif;
+$Montserrat: 'Montserrat', sans-serif;
+
+//1em = 12pt = 16px = 100%
+$font-size-xxlarge:       40px;
+$font-size-xlarge:        30px;
+$font-size-large:         20px;
+$font-size-medium:        18px;
+$font-size-small:         16px;
+$font-size-xsmall:        15px;
+$font-size-xxsmall:       12px;
+$font-size-xxxsmall:      10px;
+
+$font-size-default:       $font-size-medium;
+
+$base-line-height:        18px;
+
+$team-profile__img:       170px
+
+
+
+

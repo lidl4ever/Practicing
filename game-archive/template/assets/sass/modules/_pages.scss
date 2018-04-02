@@ -1,0 +1,443 @@
+//
+// Home
+//
+.message-top__beware {
+  @extend .container-maxWidth-center;
+  display: flex;
+  align-items: center;
+  background: $color-blue-green;
+  padding: 39px 306px 30px 306px;
+  color: $brand-dark-blue;
+  fill: $brand-dark-blue;
+  &.hidden {
+    //display: none;
+    /* animation: scroll-hide 3s 1;
+    animation-direction: alternate; */
+    /* transition: all .3s ease; */
+  }
+
+  .ic-warning {
+    width: 84px;
+    height: 58px;
+  }
+  .col1 {
+    padding: 0 26px 0 0;
+  }
+}
+
+@keyframes scroll-hide {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(160px);
+  }
+}
+
+/* @keyframes scroll-show {
+  0% {
+    transform: translateY(160px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+} */
+
+
+.section-top {
+  position: relative;
+}
+
+.home-top {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0px;
+  padding: 88px $canvas-inner-space;
+
+  display: flex;
+//  height: 935px;
+  color: white;
+/*   background: url(../img/GE_Landing_bgd.png) no-repeat;
+  background-size: 100% 100%;
+ */
+  background: #3b4aff;
+  background: -moz-linear-gradient(left, #3b4aff 0%, #2fe6ed 100%);
+  background: -webkit-linear-gradient(left, #3b4aff 0%,#2fe6ed 100%);
+  background: linear-gradient(to right, #3b4aff 0%,#2fe6ed 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b4aff', endColorstr='#2fe6ed',GradientType=1 );
+
+  p {
+    @extend .line-height-small;
+  }
+
+  .col1 {
+    width: $grid * 7;
+  }
+  .col2 {
+    width: $grid * 5;
+    text-align: center;
+  }
+}
+
+.home-headline {
+  font-weight: 400;
+  color: white;
+  width: $grid *11;
+}
+
+.home-gamengine-pic {
+  img {
+    width: 440px;
+  }
+}
+
+.sign-up {
+  margin: 0 auto;
+  max-width: 650px;
+  text-align: center;
+  font-size: $font-size-xlarge;
+  input[type="email"] {
+    width: 280px;
+  }
+}
+
+.form-sign-up {
+  margin-top: $gutter*2;
+}
+
+//
+// Content page
+//
+.content-header-bg {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0px;
+  padding: 280px $canvas-inner-space 0 $canvas-inner-space;
+  height: 240px;
+  background: #3b4aff;
+  background: -moz-linear-gradient(45deg, #3b4aff 0%, #42eb90 100%);
+  background: -webkit-linear-gradient(45deg, #3b4aff 0%,#42eb90 100%);
+  background: linear-gradient(45deg, #3b4aff 0%,#42eb90 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b4aff', endColorstr='#42eb90',GradientType=1 );
+}
+
+//
+// Coming soon
+.canvas-coming-soon {
+  height: calc(100vh - 550px);
+}
+.coming-soon {
+  .note {
+    margin-bottom: $base-line-height*2;
+  }
+  .section-title {
+    .divider-bar {
+      width: 168px;
+      margin: $base-line-height*2 auto 0 auto;
+    }
+  }
+}
+
+.divider-bar {
+  display: block;
+  background: $brand-secondary;
+  height: 3px;
+}
+
+//
+// Sign up
+.gamengine-form {
+  max-width: 585px;
+  text-align: left;
+  label {
+    @extend .Raleway, .text-bold-12, .uppercase;
+    display: block;
+    color: $brand-primary;
+  }
+  input[type="text"], input[type="email"] {
+    width: 100%;
+  }
+  .note {
+    @extend .Raleway, .text-reqular-18;
+    margin: $gutter 0 0 0;
+  }
+  .button {
+    margin-top: $base-line-height*2.7;
+  }
+
+  .checkbox-options {
+    label {
+      @extend .Raleway, .text-reqular-18, .initialcase;
+      display: inline-block;
+      color: black;
+      margin-top: $gutter/3;
+      padding-left: 35px;
+    }
+    .box-holder {
+      @extend .pointer;
+      position: relative;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      input[type="checkbox"] {
+        @extend .pointer;
+        @include opacity (0);
+      }
+      input:checked ~ .checkmark {
+        background: $brand-light-blue;
+        border: solid 1px $brand-primary;
+      }
+      input:checked ~ .checkmark:after {
+        display: block;
+      }
+    }
+    .checkmark {
+      @include border-radius(5px);
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      border: solid 1px $brand-primary;
+      &:after {
+        display: none;
+        content: "\2713";
+        width: 25px;
+        height: 25px;
+        text-align: center;
+      }
+    }
+  }
+
+}
+// gamengine-form
+
+.custom-select {
+  @include border-radius(5px);
+  @extend .pointer, .Raleway, .text-reqular-18;
+  position: relative;
+  border: solid 1px $brand-primary;
+  height: 50px;
+  .fa-angle-down {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: $font-size-small;
+    color: $brand-primary;
+  }
+  select {
+    display: none;
+  }
+  .select-selected {
+    //background: $brand-light-blue;
+    height: 100%;
+    padding: 10px 0 0 $gutter;
+    &:after {
+      @include rotate (180deg);
+      position: absolute;
+      //content: "\005e";
+    }
+    &.select-arrow-active:after {
+      position: absolute;
+      //content: "\005e";
+    }
+  }
+}
+
+.select-items div {
+  color: black;
+  background: white;
+  border: solid 1px $brand-primary;
+  padding: 10px 0 0 $gutter;
+  height: 50px;
+  &:hover {
+    background-color: $brand-light-blue;
+  }
+}
+
+.select-hide {
+  display: none;
+}
+
+
+
+//
+// Our team
+.our-team {
+
+  .paragraph-title {
+    margin:0 0 40px 0;
+  }
+
+  .row {
+    padding: $gutter*1.3 (230px + 170px);
+    margin:0 (-($canvas-inner-space));
+    &:nth-child(1) {
+      padding-top: 0;
+    }
+/*     &:nth-child(even) {
+      background: $brand-light-blue;
+    }*/
+    &.about-us {
+      background: $brand-light-blue;
+    }
+    &.advisors {
+      background: $color-light-green;
+    }
+  }
+
+  .advisors {
+    .paragraph-title, .name, .name .linkedin a {
+      color: $color-blue-green;
+    }
+
+    .team-profile {
+      .col1 {
+        margin-left: $gutter*2;
+        margin-right: 0;
+      }
+    }
+
+  }
+  .name {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: $base-line-height;
+    font-weight: 700;
+/*     .divider-bar {
+      margin-top: $gutter*1.5;
+    } */
+    .linkedin {
+      position: relative;
+      height: 27px;
+      vertical-align: bottom;
+      color: $brand-primary;
+      border-left: solid 2px black;
+      padding-left: $gutter* 0.7;
+      margin-left: $gutter* 0.65;
+      a {
+        position: absolute;
+        top: -2px;
+      }
+    }
+  }
+
+}
+
+.team-profile {
+  display: flex;
+  .col1 {
+    width: ($team-profile__img * 3) + $gutter + 2px;
+    margin-right: $gutter*2;
+  }
+  .col2 {
+    max-width: 500px;
+  }
+}
+
+.team-profile__img {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    width: $team-profile__img;
+    margin-right: $gutter/2;
+    margin-bottom: $gutter;
+    &:nth-child(3n+0) {
+      margin-right: 0;
+    }
+  }
+  img {
+    width: $team-profile__img;
+    height: $team-profile__img;
+    display: block;
+  }
+}
+
+.advisors-profile {
+  @extend .team-profile;
+  flex-direction: row-reverse;
+}
+
+.ui-tabs-active {
+  img {
+    border: solid 2px $brand-secondary;
+  }
+}
+
+.title-partners-investors {
+  margin-top: 100px;
+}
+
+.bitmark-investors, .bitmark-partners {
+  ul {
+    display: flex;
+    align-items: center;
+  }
+  ul li {
+    text-align: center;
+  }
+}
+
+.bitmark-investors {
+  margin-bottom: $base-line-height*4;
+  li {
+    margin-right: 125px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:nth-child(1) {
+      img {
+        width: 216px;
+      }
+    }
+    &:nth-child(2) {
+      img {
+        width: 175px;
+      }
+    }
+    &:nth-child(3) {
+      img {
+        width: 125px;
+      }
+    }
+    &:nth-child(4) {
+      img {
+        width: 273px;
+      }
+    }
+  }
+}
+
+.bitmark-partners {
+  li {
+    margin-right: 165px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:nth-child(1) {
+      img {
+        height: 44px;
+      }
+    }
+    &:nth-child(2) {
+      img {
+        height: 41px;
+      }
+    }
+    &:nth-child(3) {
+      img {
+        height: 40px;
+      }
+    }
+    &:nth-child(4) {
+      img {
+        height: 70px;
+      }
+    }
+  }
+}
+

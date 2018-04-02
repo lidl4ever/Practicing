@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://webapp.devel.bitmark.com/issuance -->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamengine</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="author" href="Bitmark%20Inc." />
+    <link rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script>
+    $(document).ready(function() {
+        $(".hambuger").click(function() {
+            $(".hambuger").toggleClass("open");
+            $(".header-menu").toggleClass("open");
+        });
+        $(".language").click(function() {
+            $(".language ul").toggleClass("open");
+        });
+    });
+    </script>
+    <script>
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        //>=, not <=
+        if (scroll >= 50) {
+            $("header").addClass("fixed-menu");
+        } else if (scroll <= 50) {
+            $("header").removeClass("fixed-menu");
+        }
+    }); //missing );
+    </script>
+</head>
+
+<body>
+    <div class="gamengine">
+        <header>
+            <div class="top__social-media">
+                <ul>
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-facebook"></i></li>
+                    <li><i class="fab fa-medium"></i></li>
+                    <li><i class="fab fa-slack"></i></li>
+                    <li><i class="fab fa-telegram"></i></li>
+                </ul>
+            </div>
+            <div class="main-header">
+                <div class="logo"><a href="index.html"><img src="../img/Gamengine_Logo.svg" alt="Gamegine logo"></a></div>
+                <div class="col2">
+                    <div class="hambuger">
+                        <span class="mb-menu"><i class="fas fa-bars"></i></span>
+                        <span class="close-menu"><i class="fas fa-times"></i></span>
+                    </div>
+                    <div class="header-menu">
+                        <ul class="menu-group">
+                            <li class="menu-item"><a href="coming-soon.html">How it works</a></li>
+                            <!--           <li class="menu-item"><a href="coming-soon.html">What is a dao?</a></li> -->
+                            <li class="menu-item"><a href="coming-soon.html">Utility token</a></li>
+                            <li class="menu-item"><a href="our-team.html">Our team</a></li>
+                            <li class="menu-item"><a href="our-team.html">Blog</a></li>
+                            <li class="menu-item button">
+                                <a href="sign-up.html" class="btn btn-outline-primary">Sign up</a>
+                            </li>
+                        </ul>
+                        <div class="language">
+                            <ul>
+                                <li>
+                                    <span>English</span>
+                                    <svg class="icon united-states">
+                                        <use xlink:href="../img/icons.svg#united-states" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <span>普通話</span>
+                                    <svg class="icon china">
+                                        <use xlink:href="../img/icons.svg#china" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <span>日本語</span>
+                                    <svg class="icon japan">
+                                        <use xlink:href="../img/icons.svg#japan" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <span>한국어</span>
+                                    <svg class="icon south-korea">
+                                        <use xlink:href="../img/icons.svg#south-korea" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <span>ру́сский язы́к</span>
+                                    <svg class="icon russia">
+                                        <use xlink:href="../img/icons.svg#russia" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <span>Español</span>
+                                    <svg class="icon span">
+                                        <use xlink:href="../img/icons.svg#span" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <span>Tiếng Việt</span>
+                                    <svg class="icon vietnam">
+                                        <use xlink:href="../img/icons.svg#vietnam" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                    </svg>
+                                </li>
+                                <span class="angle-down"><i class="fas fa-angle-down"></i></span>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End: header-menu -->
+                </div>
+            </div>
+        </header>
+        <!-- End: header -->
+        <!-- START: body content -->
+        <div class="content-wrapper">
+            <div class="page-content">
+                <div class="sign-up">
+                    <h2 class="section-title center">
+                      <i>S</i>ign <i>U</i>p
+                  </h2>
+                    <!-- Begin MailChimp Signup Form -->
+                    <div id="mc_embed_signup" class="gamengine-form">
+                        <form action="https://twitter.us17.list-manage.com/subscribe/post?u=2b4c2930aaf31e0554dfe7cee&amp;id=f5553341ea" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll">
+                                <div class="mc-field-group">
+                                    <label for="mce-FNAME">First Name </label>
+                                    <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+                                </div>
+                                <div class="mc-field-group">
+                                    <label for="mce-LNAME">Last Name </label>
+                                    <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+                                </div>
+                                <div class="mc-field-group">
+                                    <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
+                                    </label>
+                                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                                </div>
+                                <!-- <div class="mc-field-group size1of2">
+                                    <label for="mce-BIRTHDAY-month">Birthday </label>
+                                    <div class="datefield">
+                                        <span class="subfield monthfield"><input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="MM" size="2" maxlength="2" name="BIRTHDAY[month]" id="mce-BIRTHDAY-month"></span> /
+                                        <span class="subfield dayfield"><input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="DD" size="2" maxlength="2" name="BIRTHDAY[day]" id="mce-BIRTHDAY-day"></span>
+                                        <span class="small-meta nowrap">( mm / dd )</span>
+                                    </div>
+                                </div> -->
+                                <div class="mc-field-group">
+                                    <label for="checkbox">Stakeholder interest
+                                    </label>
+                                    <div class="checkbox-options">
+                                        <label class="box-holder">
+                                            Investor
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="box-holder">
+                                            Video Game Creator
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="box-holder">
+                                            Video Game Player
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mc-field-group">
+                                    <label for="sale-phase">Sale phase</label>
+                                    <div class="custom-select">
+                                      <i class="fas fa-angle-down"></i>
+                                      <select>
+                                        <option value="0">Private Sale* | KYC Required, Min. of $250K USD investment</option>
+                                        <option value="1">Private Sale* | </option>
+                                      </select>
+                                    </div>
+                                </div>
+                                <div id="mce-responses" class="clear">
+                                    <div class="response" id="mce-error-response" style="display:none"></div>
+                                    <div class="response" id="mce-success-response" style="display:none"></div>
+                                </div>
+                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                    <input type="text" name="b_2b4c2930aaf31e0554dfe7cee_f5553341ea" tabindex="-1" value="">
+                                </div>
+                                <div class="note">
+                                    <b>*Note</b>: Anyone who successfully completes the KYC process will be automatically airdropped a GAMEngine account with one token for access into the platform.
+                                </div>
+                                <div class="button">
+                                    <input type="submit" value="Submit" name="submit" id="mc-embedded-subscribe" class="btn btn-primary">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+                    <script type='text/javascript'>
+                    (function($) { window.fnames = new Array();
+                        window.ftypes = new Array();
+                        fnames[0] = 'EMAIL';
+                        ftypes[0] = 'email';
+                        fnames[1] = 'FNAME';
+                        ftypes[1] = 'text';
+                        fnames[2] = 'LNAME';
+                        ftypes[2] = 'text';
+                        fnames[3] = 'BIRTHDAY';
+                        ftypes[3] = 'birthday'; }(jQuery));
+                    var $mcj = jQuery.noConflict(true);
+                    </script>
+                    <!--End mc_embed_signup-->
+                </div>
+            </div>
+            <!-- End: page-content -->
+        </div>
+        <!-- END: body content -->
+        <!-- START: footer -->
+        <footer>
+            <div class="footer-menu">
+                <ul class="items">
+                    <li class="main-item">
+                        <span>CONTACT US</span>
+                        <ul>
+                            <li class="sub-item"><a href="mailto:info@gamengine.com">info@gamengine.com</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-item">
+                        <span>INFORMATION</span>
+                        <ul>
+                            <li class="sub-item"><a href="#">Our Team</a></li>
+                            <li class="sub-item"><a href="#">How It Works</a></li>
+                            <li class="sub-item"><a href="#">Blog</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-item">
+                        <span>&nbsp;</span>
+                        <ul>
+                            <li class="sub-item"><a href="#">Privacy Policy</a></li>
+                            <li class="sub-item"><a href="#">Terms &amp; Conditions</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            © 2018 GAMEngine. GAMEngine™ and related trademarks are property of GAMEngine LLC. All rights reserved.
+        </footer>
+        <!-- END: footer -->
+    </div>
+    <!-- END: gamengine -->
+    <script>
+        var x, i, j, selElmnt, a, b, c;
+        /*look for any elements with the class "custom-select":*/
+        x = document.getElementsByClassName("custom-select");
+        for (i = 0; i < x.length; i++) {
+          selElmnt = x[i].getElementsByTagName("select")[0];
+          /*for each element, create a new DIV that will act as the selected item:*/
+          a = document.createElement("DIV");
+          a.setAttribute("class", "select-selected");
+          a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+          x[i].appendChild(a);
+          /*for each element, create a new DIV that will contain the option list:*/
+          b = document.createElement("DIV");
+          b.setAttribute("class", "select-items select-hide");
+          for (j = 1; j < selElmnt.length; j++) {
+            /*for each option in the original select element,
+            create a new DIV that will act as an option item:*/
+            c = document.createElement("DIV");
+            c.innerHTML = selElmnt.options[j].innerHTML;
+            c.addEventListener("click", function(e) {
+                /*when an item is clicked, update the original select box,
+                and the selected item:*/
+                var i, s, h;
+                s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                h = this.parentNode.previousSibling;
+                for (i = 0; i < s.length; i++) {
+                  if (s.options[i].innerHTML == this.innerHTML) {
+                    s.selectedIndex = i;
+                    h.innerHTML = this.innerHTML;
+                    break;
+                  }
+                }
+                h.click();
+            });
+            b.appendChild(c);
+          }
+          x[i].appendChild(b);
+          a.addEventListener("click", function(e) {
+              /*when the select box is clicked, close any other select boxes,
+              and open/close the current select box:*/
+              e.stopPropagation();
+              closeAllSelect(this);
+              this.nextSibling.classList.toggle("select-hide");
+              this.classList.toggle("select-arrow-active");
+            });
+        }
+        function closeAllSelect(elmnt) {
+          /*a function that will close all select boxes in the document,
+          except the current select box:*/
+          var x, y, i, arrNo = [];
+          x = document.getElementsByClassName("select-items");
+          y = document.getElementsByClassName("select-selected");
+          for (i = 0; i < y.length; i++) {
+            if (elmnt == y[i]) {
+              arrNo.push(i)
+            } else {
+              y[i].classList.remove("select-arrow-active");
+            }
+          }
+          for (i = 0; i < x.length; i++) {
+            if (arrNo.indexOf(i)) {
+              x[i].classList.add("select-hide");
+            }
+          }
+        }
+        /*if the user clicks anywhere outside the select box,
+        then close all select boxes:*/
+        document.addEventListener("click", closeAllSelect);
+    </script>
+</body>
+
+</html>

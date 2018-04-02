@@ -1,0 +1,48 @@
+ /* line 37, ../assets/sass/partials/_form.scss */
+ .btn, a.btn {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+  }
+  /* line 40, ../assets/sass/partials/_form.scss */
+  .btn.disabled, a.btn.disabled {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    /* For IE8 and earlier */
+  }
+  
+  /* line 49, ../assets/sass/partials/_form.scss */
+  a.btn {
+    display: inline-block;
+  }
+  
+  /* line 56, ../assets/sass/partials/_form.scss */
+  button[disabled] {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    /* For IE8 and earlier */
+  }
+  
+  /* line 60, ../assets/sass/partials/_form.scss */
+  .btn-outline-primary {
+    border: solid 2px white;
+    color: white;
+    background: transparent;
+    font-size: 16px;
+    padding: 18px 60px;
+  }
+  
+  /* line 69, ../assets/sass/partials/_form.scss */
+  .btn-primary {
+    border: 0;
+    color: #3B4AFF;
+    background: #EFF2FF;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 18px 39px;
+  }
+
+  .btn {
+    font-size: 10px;
+  }

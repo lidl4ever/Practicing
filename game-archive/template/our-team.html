@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://webapp.devel.bitmark.com/issuance -->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamengine</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="author" href="Bitmark%20Inc." />
+    <link rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script>
+    $(document).ready(function() {
+        $(".hambuger").click(function() {
+            $(".hambuger").toggleClass("open");
+            $(".header-menu").toggleClass("open");
+        });
+        $(".language").click(function() {
+            $(".language ul").toggleClass("open");
+        });
+    });
+    </script>
+    <script>
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        //>=, not <=
+        if (scroll >= 150) {
+            $("header").addClass("fixed-menu");
+        } else if (scroll <= 150) {
+            $("header").removeClass("fixed-menu");
+        }
+    }); //missing );
+    </script>
+</head>
+
+<body>
+    <div class="gamengine">
+        <header>
+            <div class="top__social-media">
+                <ul>
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-facebook"></i></li>
+                    <li><i class="fab fa-medium"></i></li>
+                    <li><i class="fab fa-slack"></i></li>
+                    <li><i class="fab fa-telegram"></i></li>
+                </ul>
+            </div>
+            <div class="main-header">
+                <div class="logo"><a href="index.html"><img src="../img/Gamengine_Logo.svg" alt="Gamegine logo"></a></div>
+                <div class="col2">
+                    <div class="hambuger">
+                        <span class="mb-menu"><i class="fas fa-bars"></i></span>
+                        <span class="close-menu"><i class="fas fa-times"></i></span>
+                    </div>
+                    <div class="header-menu">
+                        <ul class="menu-group">
+                            <li class="menu-item"><a href="coming-soon.html">How it works</a></li>
+                            <!--           <li class="menu-item"><a href="coming-soon.html">What is a dao?</a></li> -->
+                            <li class="menu-item"><a href="coming-soon.html">Utility token</a></li>
+                            <li class="menu-item"><a href="our-team.html">Our team</a></li>
+                            <li class="menu-item"><a href="our-team.html">Blog</a></li>
+                            <li class="menu-item button">
+                                <a href="sign-up.html" class="btn btn-outline-primary">Sign up</a>
+                            </li>
+                        </ul>
+                        <div class="language">
+                            <ul>
+                                <li>
+                                    <span>English</span>
+                                    <svg class="icon united-states">
+                                        <use xlink:href="../img/icons.svg#united-states" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <span>普通話</span>
+                                    <svg class="icon china">
+                                        <use xlink:href="../img/icons.svg#china" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <span>日本語</span>
+                                    <svg class="icon japan">
+                                        <use xlink:href="../img/icons.svg#japan" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <span>한국어</span>
+                                    <svg class="icon south-korea">
+                                        <use xlink:href="../img/icons.svg#south-korea" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <span>ру́сский язы́к</span>
+                                    <svg class="icon russia">
+                                        <use xlink:href="../img/icons.svg#russia" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <span>Español</span>
+                                    <svg class="icon span">
+                                        <use xlink:href="../img/icons.svg#span" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <span>Tiếng Việt</span>
+                                    <svg class="icon vietnam">
+                                        <use xlink:href="../img/icons.svg#vietnam" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                    </svg>
+                                </li>
+                                <span class="angle-down"><i class="fas fa-angle-down"></i></span>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End: header-menu -->
+                </div>
+            </div>
+        </header>
+        <!-- End: header -->
+        <!-- START: body content -->
+        <div class="content-wrapper">
+            <div class="page-content">
+                <div class="our-team">
+                    <div class="row">
+                        <h1 class="section-title center">
+                                <i>O</i>ur <i>T</i>eam
+                            </h1>
+                        <p>
+                            This project is a collaboration of two teams: Charles Huang, the co-creator of the Guitar Hero® video game franchise, led Guitar Hero to become the 2nd video game franchise in history to reach $1B USD, a mark he achieved 3 times. He also co-founded Green Throttle, an Android game controller platform acquired by Google. At Indigo 7 Silicon Valley, he and his team of successful entrepreneurs and video game industry veterans have held executive roles at industry giants including Activision®, SNK®, and Namco®.
+                        </p>
+                        <p>
+                            Sean Moss-Pultz and his Bitmark team (blockchain startup invested by Cherubic, DCG, WI Harper, Alibaba) provide the technical blockchain knowledge. Bitmark currently works with organizations including the University of California at Berkeley and KKBox (streaming music service, the Spotify of Asia with over 10M paid subscribers in Taiwan, Hong Kong, and Singapore) in deploying its property title blockchain technology.
+                        </p>
+                        <p>
+                            Together, Sean and Charles lead a team of 20 in the Silicon Valley (Cupertino, California), Taiwan, and Vietnam.
+                        </p>
+                    </div>
+                    <!-- End: row -->
+                    <div class="row about-us">
+                        <div class="paragraph-title">About Us</div>
+                        <div class="team-profile">
+                            <div class="col1">
+                                <ul class="team-profile__img">
+                                    <li><a href="#Charles-Huang"><img src="../img/hs_huang_420.jpg" alt="Charles Huang"></a></li>
+                                    <li><a href="#Sean-Moss-Pultz"><img src="../img/hs_moss-pultz_420.jpg" alt="Sean Moss-Pultz"></a></li>
+                                    <li><a href="#Stacey-Hirata"><img src="../img/hs_hirata_420.jpg" alt="Stacey Hirata"></a></li>
+                                    <li><a href="#Christopher-Hall"><img src="../img/hs_hall_420.jpg" alt="Christopher Hall"></a></li>
+                                    <li><a href="#Casey-Alt"><img src="../img/hs_alt_420.jpg" alt="Casey Alt"></a></li>
+                                    <li><a href="#Michael"><img src="../img/hs_nguyen_420.jpg" alt="Michael Nguyễn"></a></li>
+                                </ul>
+                            </div>
+                            <div class="col2">
+                                <div class="team-profile__desc">
+                                    <div id="Charles-Huang">
+                                        <h2 class="name">
+                                                <span>Charles Huang</span>
+                                                <span class="linkedin"><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                                                <!-- <span class="divider-bar"></span> -->
+                                            </h2>
+                                        <ul class="dot-list">
+                                            <li>Co-creator Guitar Hero video game franchise</li>
+                                            <li>Led Guitar Hero to become the 2nd video game franchise in history to reach $1B USD in annual sales (2007, 2008, 2009) at Activision</li>
+                                            <li>Cofounder, RedOctane (acquired by Activision for $150M USD)</li>
+                                            <li>Cofounder, Green Throttle (Android game controller platform acquired by Google)</li>
+                                            <li>Advisor or Investor in gaming entities including: Pennypop, A Bit Lucky (acquired by Zynga in 2012), Velan Studios (ex-Activision veterans), Steel Wool Studios (Virtual Reality), Doodle Mobile (China), KSV (owner of Activision Blizzard’s official Overwatch League team in Seoul, Korea)</li>
+                                            <li>University of California at Berkeley</li>
+                                        </ul>
+                                    </div>
+                                    <div id="Sean-Moss-Pultz">
+                                        <h2 class="name">
+                                                <span>Sean Moss-Pultz</span>
+                                                <span class="linkedin"><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                                                <!-- <span class="divider-bar"></span> -->
+                                            </h2>
+                                        <ul class="dot-list">
+                                            <li>VP of Marketing for the Guitar Hero brand at RedOctane/Activision</li>
+                                            <li>Director of Marketing at Namco, responsible for all Marketing and PR in North America for franchises including Pac-Man, Tekken, and Ace Combat</li>
+                                            <li>Director of Marketing and PR at SNK (Neo Geo, King of Fighters, Metal Slug)</li>
+                                            <li>Head of Publishing, Green Throttle (Android game controller platform acquired by Google)</li>
+                                            <li>CEO, Black Koi Games (Mobile Games Developer)</li>
+                                            <li>President, enVie Interactive (Massively Multiplayer Online - MMO Publisher &amp; Creator)</li>
+                                        </ul>
+                                    </div>
+                                    <div id="Stacey-Hirata">
+                                        <h2 class="name">
+                                                <span>Stacey Hirata</span>
+                                                <span class="linkedin"><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                                                <!-- <span class="divider-bar"></span> -->
+                                            </h2>
+                                        <ul class="dot-list">
+                                            <li>VP of Marketing for the Guitar Hero brand at RedOctane/Activision</li>
+                                            <li>Director of Marketing at Namco, responsible for all Marketing and PR in North America for franchises including Pac-Man, Tekken, and Ace Combat</li>
+                                            <li>Director of Marketing and PR at SNK (Neo Geo, King of Fighters, Metal Slug)</li>
+                                            <li>Head of Publishing, Green Throttle (Android game controller platform acquired by Google)</li>
+                                            <li>CEO, Black Koi Games (Mobile Games Developer)</li>
+                                            <li>President, enVie Interactive (Massively Multiplayer Online - MMO Publisher &amp; Creator)</li>
+                                        </ul>
+                                    </div>
+                                    <div id="Christopher-Hall">
+                                        <h2 class="name">
+                                                <span>Christopher Hall</span>
+                                                <span class="linkedin"><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                                                <!-- <span class="divider-bar"></span> -->
+                                            </h2>
+                                        <ul class="dot-list">
+                                            <li>Head of Engineering at Bitmark Inc.</li>
+                                            <li>Engineer at Openmoko</li>
+                                            <li>VP R&amp;D at General Resources</li>
+                                            <li>Chief Engineer at AGP Telecom</li>
+                                            <li>The University of Manchester, BS Computer Science</li>
+                                        </ul>
+                                    </div>
+                                    <div id="Casey-Alt">
+                                        <h2 class="name">
+                                                <span>Casey Alt</span>
+                                                <span class="linkedin"><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                                                <!-- <span class="divider-bar"></span> -->
+                                            </h2>
+                                        <ul class="dot-list">
+                                            <li>Head of Product at Bitmark Inc.</li>
+                                            <li>Director of Interfaces at Openmoko</li>
+                                            <li>Artist</li>
+                                            <li>Professor at Columbia University</li>
+                                            <li>Professor at Duke University</li>
+                                            <li>Stanford University, MA History &amp; Philosophy of Science &amp; Technology</li>
+                                            <li>University of California at Los Angeles, MFA Design &amp; Media Arts</li>
+                                            <li>United States Military Academy</li>
+                                        </ul>
+                                    </div>
+                                    <div id="Michael">
+                                        <h2 class="name">Michael Nguyễn
+                                                <span class="linkedin"><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                                                <!-- <span class="divider-bar"></span> -->
+                                            </h2>
+                                        <ul class="dot-list">
+                                            <li>Head of Business Operations at Steel Wool Studios (ex-Pixar led Virtual Reality Game Studio, secured $5M Series A in 2016)</li>
+                                            <li>COO, Cyworld Vietnam (venture backed by IDG Ventures and SK Telecom, the first social network in Vietnam, 4M users and 70 employees)</li>
+                                            <li>Founder, FriendsPlus (dating service acquired by YANTV, the MTV of Vietnam)</li>
+                                            <li>Ran E-Commerce Operations for Guitar Hero at RedOctane/Activision</li>
+                                            <li>MBA at Kellogg (Northwestern University)</li>
+                                            <li>University of California at Berkeley</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End: row -->
+                    <div class="row advisors">
+                        <div class="paragraph-title">Our Advisors</div>
+                        <div class="advisors-profile">
+                            <div class="col1">
+                                <ul class="team-profile__img">
+                                    <li><a href="#adv-Charles-Huang"><img src="../img/hs_huang_420.jpg" alt="Charles Huang"></a></li>
+                                    <li><a href="#adv-Sean-Moss-Pultz"><img src="../img/hs_moss-pultz_420.jpg" alt="Sean Moss-Pultz"></a></li>
+                                    <li><a href="#adv-Stacey-Hirata"><img src="../img/hs_hirata_420.jpg" alt="Stacey Hirata"></a></li>
+                                    <li><a href="#adv-Christopher-Hall"><img src="../img/hs_hall_420.jpg" alt="Christopher Hall"></a></li>
+                                    <li><a href="#adv-Casey-Alt"><img src="../img/hs_alt_420.jpg" alt="Casey Alt"></a></li>
+                                    <li><a href="#adv-Michael"><img src="../img/hs_nguyen_420.jpg" alt="Michael Nguyễn"></a></li>
+                                </ul>
+                            </div>
+                            <div class="col2">
+                                <div class="team-profile__desc">
+                                    <div id="adv-Charles-Huang">
+                                        <h2 class="name">
+                                                <span>Charles Huang</span>
+                                                <span class="linkedin"><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                                                <!-- <span class="divider-bar"></span> -->
+                                            </h2>
+                                        <ul class="dot-list">
+                                            <li>Co-creator Guitar Hero video game franchise</li>
+                                            <li>Led Guitar Hero to become the 2nd video game franchise in history to reach $1B USD in annual sales (2007, 2008, 2009) at Activision</li>
+                                            <li>Cofounder, RedOctane (acquired by Activision for $150M USD)</li>
+                                            <li>Cofounder, Green Throttle (Android game controller platform acquired by Google)</li>
+                                            <li>Advisor or Investor in gaming entities including: Pennypop, A Bit Lucky (acquired by Zynga in 2012), Velan Studios (ex-Activision veterans), Steel Wool Studios (Virtual Reality), Doodle Mobile (China), KSV (owner of Activision Blizzard’s official Overwatch League team in Seoul, Korea)</li>
+                                            <li>University of California at Berkeley</li>
+                                        </ul>
+                                    </div>
+                                    <div id="adv-Sean-Moss-Pultz">
+                                        <h2 class="name">
+                                                <span>Sean Moss-Pultz</span>
+                                                <span class="linkedin"><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                                                <!-- <span class="divider-bar"></span> -->
+                                            </h2>
+                                        <ul class="dot-list">
+                                            <li>VP of Marketing for the Guitar Hero brand at RedOctane/Activision</li>
+                                            <li>Director of Marketing at Namco, responsible for all Marketing and PR in North America for franchises including Pac-Man, Tekken, and Ace Combat</li>
+                                            <li>Director of Marketing and PR at SNK (Neo Geo, King of Fighters, Metal Slug)</li>
+                                            <li>Head of Publishing, Green Throttle (Android game controller platform acquired by Google)</li>
+                                            <li>CEO, Black Koi Games (Mobile Games Developer)</li>
+                                            <li>President, enVie Interactive (Massively Multiplayer Online - MMO Publisher &amp; Creator)</li>
+                                        </ul>
+                                    </div>
+                                    <div id="adv-Stacey-Hirata">
+                                        <h2 class="name">
+                                                <span>Stacey Hirata</span>
+                                                <span class="linkedin"><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                                                <!-- <span class="divider-bar"></span> -->
+                                            </h2>
+                                        <ul class="dot-list">
+                                            <li>VP of Marketing for the Guitar Hero brand at RedOctane/Activision</li>
+                                            <li>Director of Marketing at Namco, responsible for all Marketing and PR in North America for franchises including Pac-Man, Tekken, and Ace Combat</li>
+                                            <li>Director of Marketing and PR at SNK (Neo Geo, King of Fighters, Metal Slug)</li>
+                                            <li>Head of Publishing, Green Throttle (Android game controller platform acquired by Google)</li>
+                                            <li>CEO, Black Koi Games (Mobile Games Developer)</li>
+                                            <li>President, enVie Interactive (Massively Multiplayer Online - MMO Publisher &amp; Creator)</li>
+                                        </ul>
+                                    </div>
+                                    <div id="adv-Christopher-Hall">
+                                        <h2 class="name">
+                                                <span>Christopher Hall</span>
+                                                <span class="linkedin"><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                                                <!-- <span class="divider-bar"></span> -->
+                                            </h2>
+                                        <ul class="dot-list">
+                                            <li>Head of Engineering at Bitmark Inc.</li>
+                                            <li>Engineer at Openmoko</li>
+                                            <li>VP R&amp;D at General Resources</li>
+                                            <li>Chief Engineer at AGP Telecom</li>
+                                            <li>The University of Manchester, BS Computer Science</li>
+                                        </ul>
+                                    </div>
+                                    <div id="adv-Casey-Alt">
+                                        <h2 class="name">
+                                                <span>Casey Alt</span>
+                                                <span class="linkedin"><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                                                <!-- <span class="divider-bar"></span> -->
+                                            </h2>
+                                        <ul class="dot-list">
+                                            <li>Head of Product at Bitmark Inc.</li>
+                                            <li>Director of Interfaces at Openmoko</li>
+                                            <li>Artist</li>
+                                            <li>Professor at Columbia University</li>
+                                            <li>Professor at Duke University</li>
+                                            <li>Stanford University, MA History &amp; Philosophy of Science &amp; Technology</li>
+                                            <li>University of California at Los Angeles, MFA Design &amp; Media Arts</li>
+                                            <li>United States Military Academy</li>
+                                        </ul>
+                                    </div>
+                                    <div id="adv-Michael">
+                                        <h2 class="name">Michael Nguyễn
+                                                <span class="linkedin"><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                                                <!-- <span class="divider-bar"></span> -->
+                                            </h2>
+                                        <ul class="dot-list">
+                                            <li>Head of Business Operations at Steel Wool Studios (ex-Pixar led Virtual Reality Game Studio, secured $5M Series A in 2016)</li>
+                                            <li>COO, Cyworld Vietnam (venture backed by IDG Ventures and SK Telecom, the first social network in Vietnam, 4M users and 70 employees)</li>
+                                            <li>Founder, FriendsPlus (dating service acquired by YANTV, the MTV of Vietnam)</li>
+                                            <li>Ran E-Commerce Operations for Guitar Hero at RedOctane/Activision</li>
+                                            <li>MBA at Kellogg (Northwestern University)</li>
+                                            <li>University of California at Berkeley</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End: row -->
+                    <div class="row">
+                        <h1 class="section-title center title-partners-investors">
+                                <i>B</i>itmark <i>P</i>artners and <i>I</i>nvestors
+                            </h1>
+                        <div class="bitmark-investors">
+                            <ul>
+                                <li><img src="../img/alibaba.jpg" alt="Alibaba"></li>
+                                <li><img src="../img/digital-currency-group.jpg" alt="Digital-currency-group"></li>
+                                <li><img src="../img/cherublic-ventures.jpg" alt="Cherublic-ventures"></li>
+                                <li><img src="../img/wi-harper-group.jpg" alt="Wi-harper-group"></li>
+                            </ul>
+                        </div>
+                        <div class="bitmark-partners">
+                            <ul>
+                                <li><img src="../img/hyperledger.png" alt="hyperledger"></li>
+                                <li><img src="../img/logo-kkfarm.png" alt="kkfarm"></li>
+                                <li><img src="../img/berkeley.png" alt="berkeley"></li>
+                                <li><img src="../img/chibitronics.png" alt="chibitronics"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End: row -->
+                </div>
+            </div>
+            <!-- End: page-content -->
+        </div>
+        <!-- END: content-wrapper -->
+        <!-- END: body content -->
+        <!-- START: footer -->
+        <footer>
+            <div class="footer-menu">
+                <ul class="items">
+                    <li class="main-item">
+                        <span>CONTACT US</span>
+                        <ul>
+                            <li class="sub-item"><a href="mailto:info@gamengine.com">info@gamengine.com</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-item">
+                        <span>INFORMATION</span>
+                        <ul>
+                            <li class="sub-item"><a href="#">Our Team</a></li>
+                            <li class="sub-item"><a href="#">How It Works</a></li>
+                            <li class="sub-item"><a href="#">Blog</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-item">
+                        <span>&nbsp;</span>
+                        <ul>
+                            <li class="sub-item"><a href="#">Privacy Policy</a></li>
+                            <li class="sub-item"><a href="#">Terms &amp; Conditions</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            © 2018 GAMEngine. GAMEngine™ and related trademarks are property of GAMEngine LLC. All rights reserved.
+        </footer>
+        <!-- END: footer -->
+        <script>
+        $(function() {
+            $(".team-profile").tabs();
+            $(".advisors-profile").tabs();
+        });
+        </script>
+    </div>
+    <!-- END: gamengine -->
+</body>
+
+</html>

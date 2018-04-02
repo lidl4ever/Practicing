@@ -1,0 +1,135 @@
+@import '_custom-type';
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700'); // 400: regular, 700: bold
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,500,700'); // 400: regular, 500: medium, 700:bold
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+
+p {
+}
+
+h1, h2, h3, h4, h5, h6 {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+h1{
+  @extend .Alegreya-sans-sc;
+  font-weight: 500;
+  font-size: $font-size-xxlarge;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+h2{
+  font-weight: 400;
+  font-size: $font-size-xlarge;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+h3{
+  font-size: $font-size-large;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+h4, h5, h6 {
+  @extend h3;
+}
+
+.headline, .section-title {
+  font-weight: 600;
+  font-size: $font-size-xlarge;
+  i {
+    font-style: normal;
+    font-size: $font-size-xlarge*1.3;
+  }
+}
+
+.paragraph-title {
+  font-size: $font-size-xlarge;
+  color: $brand-primary;
+  text-align: center;
+}
+
+.section-title {
+  color: $brand-primary;
+  //margin-top: $gutter*3;
+  margin-bottom: $gutter;
+
+  .subtitle {
+    display: block;
+    font-size: $font-size-xlarge;
+    padding-top: $gutter /2;
+  }
+}
+
+h2.name {
+  color: $brand-primary;
+  margin-bottom: $gutter*1.5;
+  text-transform: capitalize;
+}
+
+.Raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+
+.Alegreya-sans-sc {
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+.Montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.line-height-large {
+  line-height: 2;
+}
+
+.line-height-regular {
+  line-height: 1.5;
+}
+
+.line-height-small {
+  line-height: 1.2;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.xsmall {
+  font-size: $font-size-xsmall;
+}
+
+.text-reqular-18 {
+  @extend .reqular;
+  font-size: $font-size-medium;
+}
+
+.text-bold-12 {
+  @extend .bold;
+  font-size: $font-size-xxsmall;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.reqular {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+

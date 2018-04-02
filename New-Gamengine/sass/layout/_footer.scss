@@ -1,0 +1,41 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0 35px 0;
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 314px;
+    background: #000A88;
+    color: #42EB90;
+    font-size: 15px;
+}
+
+.footer-menu .items {
+    display: flex;
+}
+
+.footer-menu .main-item {
+    margin-right: 90px;
+}
+
+.footer-menu .main-item span {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.footer-menu .main-item a {
+    color: white;
+}
+  
+footer {
+    padding: 20px 15px 0 15px;
+    font-size: 15px;
+    height: 200px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

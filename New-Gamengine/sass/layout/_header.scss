@@ -1,0 +1,126 @@
+header {
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 0;
+    right: 0;
+    background: #3b4aff;
+    background: -moz-linear-gradient(left, #3b4aff 0%, #02ecb7 100%);
+    background: -webkit-linear-gradient(left, #3b4aff 0%, #02ecb7 100%);
+    background: linear-gradient(to right, #3b4aff 0%, #02ecb7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b4aff', endColorstr='#02ecb7',GradientType=1 );
+  }
+  /* line 77, ../assets/sass/partials/_layout.scss */
+  header.fixed-menu {
+    position: fixed;
+  }
+  
+  /* line 84, ../assets/sass/partials/_layout.scss */
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 60px;
+    padding-left: 210px;
+    padding-right: 210px;
+    padding-bottom: 70px;
+  }
+  
+  /* line 95, ../assets/sass/partials/_layout.scss */
+  .logo img {
+    width: 330px;
+  }
+  
+  /* line 100, ../assets/sass/partials/_layout.scss */
+  .hambuger {
+    display: none;
+    font-size: 16px;
+    color: white;
+    padding-top: 9px;
+  }
+  
+  /* line 107, ../assets/sass/partials/_layout.scss */
+  .header-menu {
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    position: relative;
+    padding-right: 243px;
+  }
+  
+  /* line 118, ../assets/sass/partials/_layout.scss */
+  .menu-group .menu-item {
+    display: inline-block;
+    margin-right: 30px;
+  }
+  /* line 121, ../assets/sass/partials/_layout.scss */
+  .menu-group .menu-item:last-child {
+    margin-right: 0;
+  }
+  /* line 126, ../assets/sass/partials/_layout.scss */
+  .menu-group .button .btn {
+    width: 146px;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    font-weight: 700;
+  }
+  /* line 135, ../assets/sass/partials/_layout.scss */
+  .menu-group a {
+    color: white;
+  }
+  
+  /* line 141, ../assets/sass/partials/_layout.scss */
+  .language {
+    position: absolute;
+    right: 0;
+  }
+  /* line 144, ../assets/sass/partials/_layout.scss */
+  .language ul {
+    position: relative;
+    top: 22px;
+    left: 32px;
+    font-size: 16px;
+    width: 203px;
+    height: 30px;
+    padding-right: 40px;
+    overflow: hidden;
+    transition: all .3s ease;
+  }
+  /* line 156, ../assets/sass/partials/_layout.scss */
+  .language ul:hover {
+    height: 210px;
+  }
+  /* line 160, ../assets/sass/partials/_layout.scss */
+  .language ul li {
+    background: #02ECB7;
+  }
+  /* line 162, ../assets/sass/partials/_layout.scss */
+  .language ul li:first-child, .language ul li:first-child:hover {
+    background: transparent;
+  }
+  /* line 165, ../assets/sass/partials/_layout.scss */
+  .language ul li:hover {
+    background: #81eece;
+  }
+  /* line 169, ../assets/sass/partials/_layout.scss */
+  .language ul li {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10px;
+    color: white;
+    white-space: nowrap;
+  }
+  /* line 180, ../assets/sass/partials/_layout.scss */
+  .language span {
+    padding-right: 7px;
+  }
+  /* line 183, ../assets/sass/partials/_layout.scss */
+  .language .angle-down {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    color: white;
+  }

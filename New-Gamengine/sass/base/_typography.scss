@@ -1,0 +1,42 @@
+/* line 9, ../assets/sass/partials/_typography.scss */
+h1, h2, h3, h4, h5, h6, h4, h5, h6 {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+  }
+  
+  /* line 14, ../assets/sass/partials/_typography.scss */
+  h1 {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+  
+  /* line 22, ../assets/sass/partials/_typography.scss */
+  h2 {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.15;
+    text-transform: uppercase;
+  }
+
+   /* line 283, ../assets/sass/modules/_responsive.scss */
+   h2 {
+    font-size: 20px;
+  }
+
+  h2.name {
+    color: #3B4AFF;
+    margin-bottom: 45px;
+    text-transform: capitalize;
+  }
+  
+  /* line 29, ../assets/sass/partials/_typography.scss */
+  h3, h4, h5, h6 {
+    font-size: 20px;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+    /* line 66, ../assets/sass/partials/_typography.scss */
+     

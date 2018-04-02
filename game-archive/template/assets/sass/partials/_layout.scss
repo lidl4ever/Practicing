@@ -1,0 +1,222 @@
+html {
+  position: relative;
+  min-height: 100%;
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  height: 100%;
+  margin: 0;
+  font: 400 $font-size-default $Montserrat;
+  line-height: 1.5;
+  color: $color-base;
+}
+
+body, button {
+  -webkit-font-smoothing: antialiased; // Fix for webkit rendering
+  -webkit-text-size-adjust: 100%;
+}
+
+
+//
+// Body
+//
+
+.gamengine {
+  @extend .container-maxWidth-center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  //background: white url(../img/Background.png) 0 0 no-repeat;
+  //background-size: 100% auto;
+  //border:solid 1px black;
+}
+
+.top__social-media {
+  background: $color-gray;
+  padding:$base-line-height 185px $base-line-height 0;
+  color: white;
+  font-size: 20px;
+  ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+  li {
+    margin-right: 26px;
+  }
+  .fab {
+    width: 20px;
+  }
+}
+
+
+.page-content {
+  padding:  $gutter*3 $canvas-inner-space;
+}
+
+//
+// Header
+//
+header {
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0;
+  right: 0;
+
+  background: #3b4aff;
+  background: -moz-linear-gradient(left, #3b4aff 0%, #02ecb7 100%);
+  background: -webkit-linear-gradient(left, #3b4aff 0%,#02ecb7 100%);
+  background: linear-gradient(to right, #3b4aff 0%,#02ecb7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b4aff', endColorstr='#02ecb7',GradientType=1 );
+
+  &.fixed-menu {
+    position: fixed;
+  }
+  .col2 {
+  }
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: $gutter*2;
+  padding-left: $canvas-inner-space;
+  padding-right: $canvas-inner-space;
+  padding-bottom:70px;
+}
+
+.logo {
+  img {
+    width: 330px;
+  }
+}
+
+.hambuger {
+  display: none;
+  font-size: 16px;
+  color: white;
+  padding-top: 9px;
+}
+
+.header-menu {
+  @extend .uppercase, .Alegreya-sans-sc;
+  margin-top: 12px;
+  font-size: $font-size-small;
+  font-weight: 700;
+  display: flex;
+  position: relative;
+  padding-right: 243px;
+}
+
+.menu-group {
+  .menu-item {
+    display: inline-block;
+    margin-right: $gutter;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .button {
+    .btn {
+      @extend .uppercase, .Alegreya-sans-sc;
+      width: 146px;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: center;
+      font-weight: 700;
+    }
+  }
+  a {
+    @extend .no-underline;
+    color: white;
+  }
+}
+
+.language {
+  position: absolute;
+  right: 0;
+  ul {
+    @extend .pointer;
+    position: relative;
+    top: 22px;
+    left: 32px;
+    font-size: $font-size-small;
+    width: 203px;
+    height: 30px;
+    padding-right: 40px;
+    overflow: hidden;
+    transition: all .3s ease;
+    //border: solid 1px black;
+    &:hover {
+      height: 30px * 7;
+    }
+  }
+  ul li {
+    background: $color-green;
+    &:first-child, &:first-child:hover {
+      background: transparent;
+    }
+    &:hover {
+      background: $color-bg-hover;
+    }
+  }
+  ul li {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10px;
+    color: white;
+    white-space: nowrap;
+    &:hover {
+      @extend .no-underline;
+    }
+  }
+  span {
+    padding-right: 7px;
+  }
+  .angle-down {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    color: white;
+  }
+}
+
+
+//
+// Footer
+//
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0 35px 0;
+  max-width: $max-width;
+  margin: 0 auto;
+  height: 314px;
+  background: $brand-dark-blue;
+  color: $brand-secondary;
+  font-size: $font-size-xsmall;
+}
+
+.footer-menu {
+  .items {
+    display: flex;
+  }
+  .main-item {
+    margin-right: $gutter*3;
+    span {
+      display: block;
+      font-size: $font-size-xxsmall;
+      font-weight: 700;
+      margin-bottom: $gutter;
+    }
+    a {
+      color: white;
+    }
+  }
+}
