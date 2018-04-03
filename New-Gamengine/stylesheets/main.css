@@ -113,10 +113,11 @@ h3, h4, h5, h6 {
 
 /* line 66, ../assets/sass/partials/_typography.scss */
 /* line 1, ../sass/pages/_utility-tokens.scss */
-.column-box {
+.column-box-1 {
   box-sizing: border-box;
   box-sizing: inherit;
   display: flex;
+  margin-bottom: 60px;
 }
 
 /* line 10, ../sass/pages/_utility-tokens.scss */
@@ -130,15 +131,16 @@ h3, h4, h5, h6 {
 /* line 17, ../sass/pages/_utility-tokens.scss */
 .second-column {
   width: 61.67%;
+  display: inline-block;
 }
 
-/* line 24, ../sass/pages/_utility-tokens.scss */
+/* line 23, ../sass/pages/_utility-tokens.scss */
 .logo-box {
-  width: 437px;
+  width: 100%;
   height: 225px;
 }
 
-/* line 29, ../sass/pages/_utility-tokens.scss */
+/* line 28, ../sass/pages/_utility-tokens.scss */
 .token-logo {
   width: 225px;
   align: right;
@@ -146,10 +148,33 @@ h3, h4, h5, h6 {
   margin: 0;
 }
 
-/* line 36, ../sass/pages/_utility-tokens.scss */
-div img {
-  position: relative;
-  float: right;
+/* line 35, ../sass/pages/_utility-tokens.scss */
+.token-img {
+  margin-bottom: 17px;
+}
+
+/* line 39, ../sass/pages/_utility-tokens.scss */
+.column-box-2 {
+  margin-top: 75px;
+  margin-bottom: 75px;
+  box-sizing: border-box;
+  box-sizing: inherit;
+  display: flex;
+}
+
+/* line 47, ../sass/pages/_utility-tokens.scss */
+.column-left {
+  width: 50%;
+  text-align: center;
+  padding: 0;
+  padding: 0 79px 0 10px;
+}
+
+/* line 55, ../sass/pages/_utility-tokens.scss */
+.column-right {
+  width: 50%;
+  text-align: center;
+  padding: 0;
 }
 
 /* line 1, ../sass/layout/_header.scss */
