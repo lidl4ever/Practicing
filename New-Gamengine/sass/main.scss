@@ -149,6 +149,13 @@
     max-width: 1920px;
     margin: 0 auto;
   }
+   
+  /* line 26, ../assets/sass/partials/_layout.scss */
+   .gamengine {
+    width: 100%;
+    
+    position: relative;
+  }
   
   /* line 209, ../assets/sass/partials/_custom-type.scss */
   .icon {
@@ -284,12 +291,7 @@
   /* line 1, ../assets/sass/partials/_layout.scss */
  
   
-  /* line 26, ../assets/sass/partials/_layout.scss */
-  .gamengine {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
+ 
   
   /* line 36, ../assets/sass/partials/_layout.scss */
   .top__social-media {

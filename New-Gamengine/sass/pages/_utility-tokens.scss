@@ -1,12 +1,40 @@
+.column-box {
+    box-sizing: border-box;
+    box-sizing: inherit;
+    display: flex;
+
+}
+
+
+
 .first-column {
     width: 38.33%;
     padding: 0 79px 0 10px;
     float: left;
+    text-align: right;
 }
 
 .second-column {
     width: 61.67%;
-    padding: 0;
-    float: right;
+
+  
 }
 
+
+.logo-box {
+    width: 437px;
+    height: 225px;
+}
+
+.token-logo {
+    width: 225px;
+    align: right;
+    float: right;
+    margin: 0;
+}
+
+div img
+{
+    position: relative;
+    float: right;
+}
