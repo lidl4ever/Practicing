@@ -57,3 +57,32 @@
     text-align: center;
     padding: 0;
 }
+
+
+
+//////////* How It Works *////////////
+
+.second-column-title {
+    width: 61.67%;
+    display: block;
+}
+
+.title-container {
+    overflow: auto;
+    
+}
+
+.coin-img {
+    float: left;
+    display: block;
+    margin-right: 30px;
+}
+
+
+.title-text {
+    float: right;
+}
+
+.title {
+    font-weight: bold;
+}

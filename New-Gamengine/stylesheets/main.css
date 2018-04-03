@@ -177,6 +177,34 @@ h3, h4, h5, h6 {
   padding: 0;
 }
 
+/* line 65, ../sass/pages/_utility-tokens.scss */
+.second-column-title {
+  width: 61.67%;
+  display: block;
+}
+
+/* line 70, ../sass/pages/_utility-tokens.scss */
+.title-container {
+  overflow: auto;
+}
+
+/* line 75, ../sass/pages/_utility-tokens.scss */
+.coin-img {
+  float: left;
+  display: block;
+  margin-right: 30px;
+}
+
+/* line 82, ../sass/pages/_utility-tokens.scss */
+.title-text {
+  float: right;
+}
+
+/* line 86, ../sass/pages/_utility-tokens.scss */
+.title {
+  font-weight: bold;
+}
+
 /* line 1, ../sass/layout/_header.scss */
 header {
   position: absolute;
