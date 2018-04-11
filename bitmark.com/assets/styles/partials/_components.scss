@@ -1,0 +1,403 @@
+//** Tabs **//
+.tabs{
+  .tab-nav{
+    li{
+        display: inline-block;
+        background: $inactive-window;
+        padding: 0 $gutter;
+    }
+  }
+}
+
+//** Lists **//
+.dot-list{
+    list-style: disc;
+    margin: 0 0 40px $gutter;
+    line-height: $base-line-height;
+    li{}
+}
+.num-list{
+    list-style: decimal;
+    margin: 0 0 $gutter $gutter;
+}
+
+//** Flex box **//
+.flex-box{
+    display: flex;
+    &.flex-nowrap{
+      flex-wrap: nowrap !important;
+    }
+    &.flex-wrap{
+      flex-wrap: wrap;
+    }
+}
+.flex{
+  display: flex;
+}
+.flex-align-items-center{
+  @extend .flex;
+  align-items: center;
+}
+.flex-center{
+  @extend .flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.align-item-center{
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-justify-center{
+  justify-content: center;
+}
+
+.flex-align-items-center{
+  @extend .flex;
+  align-items: center;
+}
+
+// Image grid
+.img-columns{
+    display: flex;
+    .b-img-holder{
+        margin: 0 ($gutter / 2);
+    }
+}
+
+//
+.box-content{
+    margin:0 ($gutter / 2);
+    &:first-child{
+        margin-left: 0;
+    }
+}
+
+//** Captions **//
+.caption-style{
+      padding: ($gutter / 3) 0;
+      background: rgba(black, 0.8);
+      color: white;
+      text-align: center;
+      h2{
+          font-size: $font-size-large;
+          margin: 0;
+      }
+      p{
+          margin: 0;
+      }
+}
+.caption-style-white{
+      padding: ($gutter) 0 0 0;
+      background: white;
+      color: black;
+      text-align: center;
+      h2{
+          font-size: $font-size-large;
+          margin: 0;
+      }
+      p{
+          margin: 0;
+      }
+}
+.caption-position-bottom{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+}
+
+//** Spacing **//
+.no-inner-gutters{
+  padding: 0 !important;
+}
+
+//** Buttons **//
+.button{
+    font-size: $font-size-medium;
+    margin: ($base-line-height) 0 (20px) 0;
+    &.clear-margin-b{margin-bottom: 0;}
+    &.clear-top{margin-top: 0;}
+    &.center{text-align: center;}
+    &.margin-t-2base{margin-top: $base-line-height *2;}
+}
+a.view-more, .view-more{
+   @extend .no-underline, .uppercase;
+   background: $brand-primary;
+   color: white;
+   font-family: $font-avenir;
+   &:hover{
+      @extend .no-underline;
+      @include opacity(0.7);
+   }
+   &.large{
+        padding: ($gutter/3) ($gutter);
+   }
+}
+a.btn-download{
+    @extend .no-underline, .uppercase;
+    background:$brand-primary;
+    color: white;
+    padding: ($gutter / 3) ($gutter*1.5);
+    &:hover{
+      @include opacity(0.7);
+      text-decoration: none;
+   }
+}
+
+button:focus{
+    outline:0;
+}
+
+.btn, button {
+  @extend .pointer;
+    display: inline-block;
+    padding: (($gutter*0.5)/2) $gutter*2;
+    font-family: $font-avenir;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 0;
+    @include border-radius(0px);
+    &:focus {
+        outline: none;
+    }
+    &.fixed{
+      width: 240px;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: center;
+    }
+}
+
+.btn-black{
+   background: rgba(0, 0, 0, 0.2);
+   color: #000;
+   border: 0;
+   -webkit-appearance: none;
+}
+.btn-black:hover{
+   background: rgba(0, 0, 0, 0.4);
+   cursor: pointer;
+}
+
+//** Form **//
+.control-holder{
+   .email{
+      /* Remove First */
+       -webkit-appearance: none;
+       -moz-appearance: none;
+       appearance: none;
+
+       /* Then Style */
+      padding-left: 5px;
+      //color: #fff;
+      font-weight: bold;
+      font-family: $font-andale;
+      font-size: 11px;
+      background:rgba(0,0,0,0);
+      border: solid 1px black;
+   }
+}
+
+.is-invalid-text-note {
+    color: $color-error;
+    margin-top: $gutter / 6;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input[type="text"], input[type="password"], input[type="number"], input[type="email"], select, .select, textarea, .file-field {
+    @include border-radius(0px);
+    width: 100%;
+    height: $gutter;
+    outline: none;
+    -webkit-appearance: none;
+    color: $black;
+    background-color: #fff;
+    border: 0;
+    border-bottom: 1px solid $brand-primary;
+    padding: ($gutter / 6);
+    font-size: $font-size-medium;
+    &:focus, &.select, {
+        outline: none;
+    }
+    .disabled, &[disabled] {
+        opacity: (.4);
+    }
+}
+
+textarea{border: 0;resize: none;}
+
+input[type="email"], .code {
+    font-family: $font-andale;
+}
+
+input[type="text"] {
+    @include border-radius(0px);
+}
+
+@include placeholder {
+    color: $gray;
+    text-transform: uppercase;
+    font-family: $font-andale;
+    font-size: $font-size-small !important;
+    line-height: 15px;
+}
+
+//** Animation **//
+.animated {
+  animation-duration: #{2.5 * 12}s;
+  animation-timing-function: linear;
+  animation-direction: initial;
+  animation-fill-mode: initial;
+  animation-play-state: initial;
+  animation-delay: 0s;
+}
+
+.infinite {
+  animation-iteration-count: infinite;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes leftToRight {
+    0%,
+    100%,
+    80% {
+        opacity: 0
+    }
+    5% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px)
+    }
+    12%,
+    8% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    13% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px)
+    }
+}
+
+@keyframes leftToRight {
+    0%,
+    100%,
+    80% {
+        opacity: 0
+    }
+    5% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px)
+    }
+    12%,
+    8% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    13% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px)
+    }
+}
+
+.fadeInLeft {
+  animation-name: leftToRight;
+}
+
+@mixin animation-delay{
+  @for $i from 1 through 12{
+    &:nth-child(#{$i}){
+      animation-delay: #{$i * 2.5}s;
+      -webkit-animation-delay: #{$i * 2.5}s;
+    }
+  }
+}
+
+// Fade in
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+
+
+
+//** Devices screen **//
+@include respond-to(mobile) {
+   .flex-box{
+      flex-wrap: wrap;
+   }
+   .box-content{
+      margin: 0 0 ($gutter / 3) 0;
+      &:last-child{
+        margin-bottom: 0;
+      }
+   }
+   .full-width-xs{
+    .btn{
+      width: 100%;
+      text-align: center;
+    }
+   }
+   .flex-box-block-xs{
+    display: block;
+   }
+}
+
+@include respond-to(handheld-device){
+    //** Flex box **//
+    .flex-box{
+        &.md-flex-wrap{
+            flex-wrap: wrap;
+            .gutter-r{
+              margin-right: 0 !important;
+              margin-bottom: 20px;
+            }
+            .gutter-l{
+              margin-left: 0 !important;
+            }
+        }
+        .column{
+          margin-bottom: $gutter *2;
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+    }
+   .flex-box-block-md{
+    display: block;
+   }
+}
+

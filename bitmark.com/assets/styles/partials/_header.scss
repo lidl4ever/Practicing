@@ -1,0 +1,453 @@
+//
+// Header
+//
+.header {
+    position: absolute;
+    top: 0;
+    width: $full-width;
+    z-index: 12;
+    .inner-header {
+        display: flex;
+        position: relative;
+        max-width: $max-width - ($gutter * 6); // minus margin space
+        margin-left: ($gutter *4);
+        margin-right: ($gutter * 2);
+        height: 80px;
+        //border-bottom: solid 1px red;
+    }
+    .left{
+        width: $grid * 6; // $grid-6 + content margin-left(75px) - logo margin -left(15px)
+        padding-right: $gutter /2;
+    }
+    .right{
+        width: $grid * 6;
+        padding-left: $gutter /2;
+        //justify-content: flex-start;
+    }
+    .left, .right{
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .logo{
+        img{width: 185px;}
+        position: absolute;
+        top: 0;
+        left: -43px;
+    }
+    .logo-sticky-menu{
+        display: none;
+        img{
+            width: 48px;
+            display: block;
+        }
+    }
+}
+
+//
+// Sticky menu - Header
+//
+.header.sticky-menu{
+    position: fixed;
+    background: white;
+    .inner-header {
+        width: calc(100% - 180px);
+        max-width: $max-width - 180px; // minus margin-left space
+        align-items: center;
+        margin-left: $gutter * 4;
+        border-bottom: solid 1px black;
+        border-right: solid 0px black;
+    }
+    .left{
+        width: $grid *6;
+    }
+    .logo{
+        display: none;
+    }
+    .logo-sticky-menu{
+        display: block;
+    }
+    .header-menu{
+        position: initial;
+        margin-top: 0;
+        &.open{
+          .submenu{display: block;}
+          .submenu-bg{
+            background: white;
+            height: 140px;
+          }
+        }
+        .submenu{
+            display: none;
+            left: 0;
+            padding-left: 0;
+            background: white;
+            //font-weight: bold  !important;
+        }
+        li.open{
+            .submenu{
+                @extend .fadeIn;
+                display: block;
+            }
+        }
+    }
+    .touch-menu .touch-inner{top: 0;}
+}
+//
+// Menu - Header
+//
+.header-menu{
+    margin-top: 40px; // align logo text BITMARK top.
+    li{
+        position: relative;
+        a{
+            //color: white !important;
+            position: relative;
+            &:before{
+                content:" ";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -2px;
+                height: 3px;
+                background: transparent;
+            }
+        }
+        a:hover, a.active{
+            color: black;
+            &:before{
+                @extend .fadeIn;
+                //background: $brand-primary;
+            }
+        }
+    }
+    .submenu-bg{
+      position: absolute;
+      background: transparent;
+    }
+    .submenu{
+        display: block;
+        position:absolute;
+        z-index: 1;
+        padding-right: $gutter  / 2;
+        padding-bottom: $gutter  / 2;
+        a{
+            color: black;
+            &:hover{
+                border: 0;
+                color: $brand-primary;
+                //opacity: 0.8;
+            }
+            &:before{
+                height: 0;
+            }
+            &.active{
+                font-weight: bold;
+            }
+        }
+    }
+}
+//
+// Common style Header / Footer Menu
+//
+
+// Detect device is a touch device.
+.touch{
+    .header-menu, .footer-menu{
+        ul.submenu{margin-top: $base-line-height /2;}
+        li li{margin-bottom: $base-line-height /2;}
+    }
+    .header.sticky-menu{
+        .header-menu{
+            .submenu-bg{background: transparent;}
+            ul.submenu{
+                display: none;
+                margin-top: $base-line-height /2;
+            }
+            li li{margin-bottom: $base-line-height /2;}
+        }
+    }
+}
+.header-menu, .footer-menu{
+    font-size: $font-size-medium;
+    font-weight:  bold;
+    li{
+        @extend .uppercase;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: $gutter;
+        white-space: nowrap;
+        &.first-child{
+            margin-left: 0;
+        }
+        li{
+            margin-left: 0;
+        }
+    }
+    a{
+        @extend .no-underline;
+        &:hover{ @extend .no-underline;}
+    }
+    .submenu{
+        font-weight: normal;
+        li{
+            display: block;
+            padding-left: 0;
+            text-transform: initial;
+        }
+    }
+}
+//
+// Menu - sub navigation fade In effect
+//
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.remove-fadeIn{
+    animation-duration: 0s;
+}
+
+// Hamburger icon
+.touch-menu {
+    display: none;
+}
+// Hamburger icon clicked effect
+.header.sticky-menu{
+    .touch-menu{
+        margin-top: 0;
+    }
+}
+.touch-menu {
+    margin-top: 6px;
+    margin-right: -6px;
+    cursor: pointer;
+    border:solid 0px #fff;
+    .touch-inner{
+        position: relative;
+        top: $base-line-height;
+        width: $mb-menu-icon-width;
+        height: $mb-menu-icon-width;
+    }
+    span{
+        top: 50%;
+        left: 50%;
+        margin-left: (-30px/2);
+        margin-top: -2px;
+    }
+    .top-bun{
+        cursor: pointer;
+        border-radius: 1px;
+        height: 3px;
+        width: 30px;
+        background: rgba(black, 1);
+        position: absolute;
+        display: block;
+        content: '';
+        @include transition(.2s);
+    }
+    .top-bun:before{
+        @extend .top-bun;
+        top: -9px;
+    }
+    .top-bun:after{
+        @extend .top-bun;
+        bottom: -9px;
+    }
+    /*&:hover [class*="-bun"] {
+        background-color: $color-base;
+    }*/
+    &.open {
+        position: absolute;
+        span{
+            @include transition(.2s);
+            background: transparent;
+        }
+        .top-bun:before {
+            top: 0;
+            transform: rotate(45deg);
+            background: $gray;
+        }
+        .top-bun:after {
+            top: 0;
+            transform: rotate(-45deg);
+            background: $gray;
+        }
+    }
+}
+
+@include respond-to(tablets) {
+    .header{
+        .inner-header{
+            max-width: $max-width - ($gutter * 4); // minus margin space
+            margin-left: ($gutter *2);
+        }
+    }
+    .header.sticky-menu{
+        .inner-header{
+            width: calc(100% - 120px);
+            max-width: $max-width - 120px; // minus margin-left space
+            margin-left: ($gutter *2);
+        }
+    }
+    // Hamburger icon
+    .touch-menu {
+        //right: -($gutter * 2);
+        &.open{
+            right: $gutter;
+        }
+    }
+}
+
+//** for template mobile
+//
+@include respond-to(mobile) {
+    .header{
+        .inner-header{
+            margin-left: $gutter * 0.5;
+            margin-right: $gutter * 0.5;
+            max-width: $max-width - ($gutter);
+        }
+        .logo{
+            left: 0;
+        }
+    }
+    .header.sticky-menu{
+        .inner-header {
+            width: calc(100% - 30px);
+            margin-left: $gutter /2;
+        }
+    }
+    // Hamburger icon
+    .touch-menu {
+        right: -($gutter);
+        .top-bun{
+            width: 28px;
+            &:before{
+                top: -8px;
+            }
+            &:after{
+                bottom: -8px;
+            }
+        }
+        &.open{
+            right: $gutter / 2 !important;
+        }
+    }
+    .logo{
+        img{width: 130px;}
+    }
+    .header-menu, .footer-menu{
+        li{margin-left: 0;}
+    }
+}
+
+//** Mobile & iPad
+@include respond-to(handheld-device) {
+    .header.sticky-menu{
+        .header-menu{
+            .submenu{
+                background: transparent;
+            }
+            // Hide submenu white bg on hamburger menu.
+            &.open{
+              .submenu-bg{
+                background: transparent;
+              }
+            }
+        }
+    }
+    .t-l-heading{
+        width: $grid * 11;
+    }
+    .header-menu{
+        font-size: $font-size-xlarge;
+    }
+
+    .header, .footer{
+        .right{
+            position: relative;
+        }
+    }
+    .header{
+        .left{
+            width: $grid *11;
+        }
+        .right{
+            align-items: flex-start;
+            padding-top: $base-line-height;
+            &.open{
+                position: initial;
+            }
+        }
+
+    }
+    .touch-menu {
+       display: block !important;
+        &.open{
+            right: $gutter * 2;
+        }
+    }
+    // Hamburger click and show full background menu
+    .nav-mb{
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0);
+        .header-menu{
+            display: none;
+        }
+        &.open{
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 11;
+            background: rgba(0, 0, 0, 1);
+            .header-menu{
+                display: block;
+                left: 0;
+                right: 0;
+                padding-left: $gutter;
+                padding-right: $gutter;
+                padding-top: $gutter;
+                padding-bottom: $gutter * 1.5;
+                margin-top: 0;
+                li{
+                    display: block;
+                    margin-left: 0;
+                    margin-bottom: $gutter /3;
+                    white-space: nowrap;
+                    a{
+                        color: white;
+                        &:hover, &:focus{
+                            opacity: 0.7;
+                            animation-duration: 0s;
+                            &:before{
+                                height: 0;
+                            }
+                        }
+                        &:before{
+                            display: none;
+                        }
+                    }
+                }
+                .submenu{
+                    display: block;
+                    position: initial;
+                    margin-top: $gutter /3;
+                    li{
+                        a:hover, a:focus{color: white; opacity: 0.7;}
+                    }
+                }
+            }
+        }
+    }
+
+    //End: nav-mb
+//
+}
+

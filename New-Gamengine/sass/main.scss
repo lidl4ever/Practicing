@@ -4,11 +4,12 @@
 @import "modules/variables";
 
 @import "pages/home";
-@import "pages/utility-tokens";
+@import "pages/pages";
 
 @import "layout/header";
 @import "layout/footer";
 
+@import "components/button";
 
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
 @import url("https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,500,700");

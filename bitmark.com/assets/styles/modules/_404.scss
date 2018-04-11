@@ -1,0 +1,115 @@
+body {
+    overflow-x: hidden;
+}
+
+#not-found-page {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff url(/assets/img/404_bg_desktop.jpg) no-repeat;
+    color: black;
+    z-index: 11;
+    .content{
+      width: $full-width;
+    }
+    .article-404{
+      margin-top: $gutter * 2;
+      margin-left: $grid * 6;
+    }
+    a {
+        @extend .no-underline, .font-andale;
+        color: $brand-primary;
+    }
+    .blue {
+        color: $brand-primary;
+    }
+    .return-home {
+        margin-top: $gutter * 1.5;
+        a {
+            font-size: 24px;
+        }
+    }
+    .mobile-bg {
+        display: none;
+    }
+}
+
+.text-404 {
+    @extend .font-andale;
+    position: absolute;
+    left: $gutter * 6;
+    bottom: $gutter * 6;
+    font-size: 72px;
+    color: $brand-primary;
+}
+
+.footer-404 {
+    position: absolute;
+    bottom: $gutter;
+    z-index: 99;
+    width: 100%;
+    background: #fff; //cover the template footer
+    .logo {
+        img {
+            width: $logo-width;
+        }
+    }
+    .bar-bottom{
+      position: absolute;
+      bottom: $gutter * 4;
+    }
+}
+
+@include respond-to(tablets) {
+    #not-found-page {
+        background-image: none;
+        background-color: #fff;
+
+        .article-404{
+            margin-left: $gutter * 2;
+        }
+    }
+    .text-404 {
+      left: $gutter * 4;
+    }
+}
+
+@include respond-to(mobile) {
+    #not-found-page {
+        background: #fff url(/assets/img/404_bg_mobile.jpg) no-repeat;
+        background-size: 380px;
+        p.first-child {
+            margin-top: $vertical-space-small * 2;
+        }
+        .content{
+            position: relative;
+        }
+        .oops {
+            display: block;
+        }
+        .article-404{
+            margin-top: $gutter * 8;
+            margin-left: $gutter;
+        }
+    }
+    .mobile-bg {
+        display: block !important;
+        position: absolute;
+        top: -125px;
+        left: -35px;
+        width: 100%;
+        z-index: 10;
+        img {
+            width: 90%;
+        }
+    }
+    .text-404 {
+        top: -($gutter);
+        right: $vertical-space-xl;
+        z-index: 11;
+    }
+    .footer-404 {
+        display: none;
+    }
+}

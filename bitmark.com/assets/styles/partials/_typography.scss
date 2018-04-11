@@ -1,0 +1,213 @@
+@import '_custom-type';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+h1.page-title, h1 {
+  @extend .uppercase;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: $base-line-height - 2; //fix baseline
+}
+
+h2.section-title, h2 {
+  @extend .uppercase;
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: $base-line-height;
+}
+
+h3.paragraph-title {
+  @extend .uppercase;
+  font-size: 17px;
+  line-height: 20px;
+  margin-bottom: $base-line-height;
+}
+
+h3, h4, h5, h6 {
+  @extend h3.paragraph-title;
+}
+
+.h2-alignment {
+  margin-top: -2px;
+}
+
+.h3-alignment {
+  margin-top: -3px;
+}
+
+.font-size-11 {
+  font-size: $font-size-xxsmall;
+  line-height: 16px;
+}
+
+.font-size-13 {
+  font-size: $font-size-small;
+  line-height: 15px;
+}
+
+.font-size-14 {
+  font-size: $font-size-medium;
+  line-height: 17px;
+}
+
+.notes {
+  @extend .font-size-11;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.account-information {
+  @extend .font-andale, .font-size-11;
+}
+
+.font-inactive-step {
+  @extend .font-size-14;
+  color: $inactive-navi;
+}
+
+.font-andale {
+  font-family: $font-andale;
+  font-size: $font-size-medium;
+}
+
+.font-andale-standard {
+  font-family: $font-andale;
+}
+
+.avenir-light {
+  font-family: $font-avenir;
+  font-weight: 300;
+}
+
+.avenir {
+  font-family: $font-avenir;
+  font-weight: 500;
+}
+
+.avenir-black {
+  font-family: $font-avenir;
+  font-weight: bold;
+}
+
+.EgyptienneFLTW01 {
+  font-family: "EgyptienneFLTW01";
+}
+
+.openSans{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.font-large-baseline {
+  font-size: $font-size-large;
+  line-height: 1.25em;
+}
+
+.font-xlarge-baseline {
+  font-size: $font-size-xlarge;
+  line-height: (1.1112em)*2;
+  margin-top: -10px;
+}
+
+@include respond-to(mobile) {
+  .font-andale {
+    font-size: $font-size-medium;
+  }
+}
+
+//Font face
+//
+//
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/avenir/Avenir-Light.eot');
+  src: url('../fonts/avenir/Avenir-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/avenir/Avenir-Light.woff') format('woff'), url('../fonts/avenir/Avenir-Light.ttf') format('truetype'), url('../fonts/avenir/Avenir-Light.svg#avenir') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/avenir/avenir.eot');
+  src: url('../fonts/avenir/avenir.eot?#iefix') format('embedded-opentype'), url('../fonts/avenir/avenir.woff') format('woff'), url('../fonts/avenir/avenir.ttf') format('truetype'), url('../fonts/avenir/avenir.svg#avenir') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/avenir/Avenir-Black.eot');
+  src: url('../fonts/avenir/Avenir-Black.eot?#iefix') format('embedded-opentype'), url('../fonts/avenir/Avenir-Black.woff') format('woff'), url('../fonts/avenir/Avenir-Black.ttf') format('truetype'), url('../fonts/avenir/Avenir-Black.svg#avenir') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('../fonts/avenir-next/AvenirNextLTPro-Regular.eot');
+  src: url('../fonts/avenir-next/AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/avenir-next/AvenirNextLTPro-Regular.woff') format('woff'), url('../fonts/avenir-next/AvenirNextLTPro-Regular.ttf') format('truetype'), url('../fonts/avenir-next/AvenirNextLTPro-Regular.svg#avenir') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'AndaleMono';
+  src: url('../fonts/andaleMono/AndaleMono.eot');
+  src: url('../fonts/andaleMono/AndaleMono.eot?#iefix') format('embedded-opentype'), url('../fonts/andaleMono/AndaleMono.woff') format('woff'), url('../fonts/andaleMono/AndaleMono.ttf') format('truetype'), url('../fonts/andaleMono/AndaleMono.svg#avenir') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: "EgyptienneFLTW01"; // EgyptienneFLTW01-55Roma
+  src: url("../fonts/721871/dde1d1bf-fab8-4316-90bf-11c373865ec0.eot?#iefix");
+  src: url("../fonts/721871/dde1d1bf-fab8-4316-90bf-11c373865ec0.eot?#iefix") format("eot"), url("../fonts/721871/c9608c86-30ac-4cc6-af64-c9a320349263.woff") format("woff"), url("../fonts/721871/0909eb30-720c-4a65-aa21-39566e450a8d.ttf") format("truetype"), url("../fonts/721871/c720c559-f62e-4552-860d-fbcf908d40eb.svg#c720c559-f62e-4552-860d-fbcf908d40eb") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "EgyptienneFLTW01"; // EgyptienneFLTW01-56Ital
+  src: url("../fonts/721874/873e5355-bcff-4271-8439-dbcb58dd66a6.eot?#iefix");
+  src: url("../fonts/721874/873e5355-bcff-4271-8439-dbcb58dd66a6.eot?#iefix") format("eot"), url("../fonts/721874/094fe4f5-7b44-4118-a2bb-95e0271b57cd.woff") format("woff"), url("../fonts/721874/990ecf46-225b-4778-87d3-51808e970cea.ttf") format("truetype"), url("../fonts/721874/819c9c38-b959-4c2e-b6c7-434ae4e03b40.svg#819c9c38-b959-4c2e-b6c7-434ae4e03b40") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "EgyptienneFLTW01"; // EgyptienneFLTW01-65Bold
+  src: url("../fonts/721877/28961fbb-c8e7-4647-84f1-1d0e25b6e854.eot?#iefix");
+  src: url("../fonts/721877/28961fbb-c8e7-4647-84f1-1d0e25b6e854.eot?#iefix") format("eot"), url("../fonts/721877/87c857f3-ad4e-4b57-b087-ae03b6f5985b.woff") format("woff"), url("../fonts/721877/2512657e-b712-4bab-8325-362f3db7990c.ttf") format("truetype"), url("../fonts/721877/65b8416e-6bac-4ca4-876f-7601abef95e0.svg#65b8416e-6bac-4ca4-876f-7601abef95e0") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

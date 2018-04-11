@@ -1,0 +1,563 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin: 0 0 0 0;
+  padding: 0;
+  font: $font-weight-base ($font-size-large) $font-avenir;
+  padding: 0;
+  line-height: 20px ;
+  vertical-align: baseline;
+  color: #000;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+body, button {
+  -webkit-font-smoothing: antialiased; // Fix for webkit rendering
+  -webkit-text-size-adjust: 100%;
+}
+
+h3 {
+  font-size: $font-size-large;
+  margin: 0;
+  //margin-bottom: -($gutter / 2.2);
+  line-height: $line-height;
+  &.block-title {
+    margin-bottom: $gutter / 2;
+  }
+  &.block-list-title {
+    margin-bottom: 0;
+  }
+}
+
+p.last-child{
+  margin-bottom: 0;
+}
+
+.main-wrapper-center {
+  max-width: $max-width;
+  width: $full-width;
+  margin: 0 auto;
+}
+
+#grid {
+  //@extend .main-wrapper-center;
+  position: relative;
+  max-width: $max-width; //border-left: solid 1px red;
+  //border-right: solid 1px red;
+}
+
+//
+// Website main layout
+//
+
+// Detect device is a touch device.
+.touch{
+  .content-container{
+    margin-top: 270px;
+  }
+}
+
+.content-container{
+  //display: flex;
+  margin-left: $desktop-margin;
+  margin-right: $gutter *2;
+  margin-bottom: ($gutter * 12);
+  margin-top: 210px;
+  min-height: calc(100vh - (300px));
+  border-left: solid 0px #000;
+  border-right: solid 0px #000;
+
+  .content {
+    padding-bottom: $gutter;
+    .section, article {
+      margin-bottom: $gutter;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+    article{margin-bottom: 40px;}
+    .section-margin-clear {
+      .section {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.row {
+  position: relative;
+  width: $full-width;
+  margin-bottom: $gutter * 3;
+  clear: both;
+  &.row-fluid{
+    position: relative;
+    left: -($gutter*4);
+    padding: $base-line-height $gutter*2 $base-line-height $gutter*4;
+    width: calc(100% + 180px);
+  }
+  &.columns {
+    display: flex;
+  }
+  &.space-between {
+    justify-content: space-between;
+  }
+  &.section-divider{
+    margin-bottom: 20px;
+  }
+  .row__flex-box{display: flex;}
+}
+
+.section {
+  &.r-section {
+    float: right;
+  }
+}
+
+.section-baseline-padding-t-4{
+  padding-top: 4px;
+}
+.section-baseline{
+  margin-top: -12px;
+}
+
+.study-details-baseline{
+  margin-top: -11px;
+}
+
+.section-baseline-10{
+  margin-top: -10px;
+}
+
+.fixed-width-half {
+  //max-width: calc(50% - 30px);
+  width: $grid * 6;
+}
+
+
+
+// Top banner
+.t-page-banner {
+  background: #ccc;
+  position: relative;
+  overflow: hidden;
+  margin-top: $gutter *7;
+  .banner-txt {
+    position: relative;
+    left: $gutter*4;
+    width: $grid * 12;
+    max-width: $max-width;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    &.top-video {
+      left: 0;
+      width: 0;
+      height: 70vw;
+      max-height: 800px;
+    }
+  }
+  &.avoid-nav {
+    margin-top: $gutter *7;
+  }
+
+
+}
+
+.bitmark-cover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  span {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+  }
+  video {
+    height: 70vw;
+  }
+  @include respond-to(web-1600) {
+    img {
+      height: 100%;
+    }
+  }
+}
+
+.t-l-slogn {
+  color: white;
+  font-size: $font-size-xxlarge * 2;
+  line-height: 1.4 !important;
+  .break {
+    display: block;
+    white-space: nowrap;
+  }
+}
+
+.t-bg-container {
+  .img-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+//Headings
+.t-l-heading {
+  @extend .uppercase;
+  margin-top: $gutter;
+  font-size: 21px;
+  line-height: 30px;
+  margin-bottom: $gutter * 2;
+}
+
+.b-heading {
+  //@extend .uppercase;
+  font-size: $font-size-xxlarge;
+  line-height: 30px;
+  margin-bottom: ($gutter/3)*2;
+  margin-top: 0;
+}
+
+h2.b-heading{
+  font-size: 17px;
+  margin-bottom: ($gutter/3)*2;
+  line-height: 20px;
+}
+
+.b-sub-heading {
+  font-size: $font-size-xlarge;
+  margin-top: $gutter;
+}
+
+.sub-head {
+  font-size: $font-size-xlarge;
+  margin-bottom: $gutter !important;
+  margin-top: 0;
+}
+
+.highlight-heading {
+  @extend .uppercase;
+  font-size: $font-size-xlarge - 1px;
+  margin-bottom: 20px;
+  margin-top: 0;
+  line-height: $base-line-height;
+  padding-top: 2px; // Fix baseline
+  font-weight: bold;
+  color: $brand-primary;
+}
+
+/* .title {
+  font-size: $font-size-large;
+}
+ */
+.paragraph-title{
+  font-size: 17px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+.divider{
+  display: block;
+  border-top: solid 1px $light-gray;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  margin-bottom: ($base-line-height * 2.5);
+}
+
+//
+// Grids at background
+//
+.grids {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 998;
+  max-width: ($max-width - 180); // content margin-left: 75px + margin-right: 60 = 135px
+  //max-width: $max-width;
+  width: calc(100% - 180px);
+  //width: 100%;
+  height: 100vh;
+  background: transparent;
+  background-image: repeating-linear-gradient( 90deg,
+  rgba(black, .1) 0,
+  rgba(black, .1) 1px,
+  rgba(black, 0) 1px,
+  rgba(black, 0) $grid);
+  border-right: solid 1px black;
+  overflow: hidden;
+  margin-left: $gutter * 4;
+  &.show-grids {
+    display: block;
+  }
+}
+
+/* .grid-header,
+.grid-footer {
+  background: rgba($color-black-90, 0.3);
+}
+
+.grid-header {
+  height: 80px;
+}
+
+.grid-footer {
+  position: absolute;
+  bottom: 0;
+  max-width: $max-width;
+  width: $full-width;
+  height: 240px;
+}
+ */
+/*.grid-margin-left{
+  @extend .grids;
+  display: block;
+  z-index: 995;
+  background-image: linear-gradient( 90deg,
+  rgba(green, .4) 0,
+  rgba(green, .4) 60px,
+  rgba(green, 0) 1px,
+  rgba(green, 0) 100%);
+}
+.grid-margin-right{
+  @extend .grids;
+  display: block;
+  z-index: 995;
+  background-image: repeating-linear-gradient( 270deg,
+  rgba(green, .4) 0,
+  rgba(green, .4) 60px,
+  rgba(green, 0) 1px,
+  rgba(green, 0) 100%);
+}*/
+//$grid-inner-right: calc((100% /12) - 30px);
+.grid-gutter-inner-right {
+  position: relative;
+   top: 0;
+  left: $grid;
+  z-index: 998;
+  height: 100vh;
+  background: transparent;
+  background-image: repeating-linear-gradient( 90deg,
+  rgba(black, .1) 0px,
+  rgba(black, .1) 15px,// 1px is overlap with border.
+  rgba(black, 0) 0px,
+  rgba(black, 0) $grid);
+}
+
+.grid-gutter-inner-left {
+  position: relative;
+  top: 0;
+  //left: 0;
+  right: $grid*2;
+  z-index: 997;
+  height: 100vh;
+  background: transparent;
+  background-image: repeating-linear-gradient( 270deg,
+  rgba(black, .1) 0px,
+  rgba(black, .1) 15px,
+  rgba(black, 0) 0px,
+  rgba(black, 0) $grid);
+}
+
+.vertical-lines {
+  @extend .grids;
+  display: block;
+  background-position: 0 25px;
+  background-color: transparent;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAUCAYAAACnOeyiAAAAF0lEQVQYV2NkgALGwc8oLy//39nZyQgAG6YEFYoUN5sAAAAASUVORK5CYII=);
+  /*
+  background-image: repeating-linear-gradient( 0deg,
+  rgba(gray, 1) 0px,
+  rgba(gray, 1) 1px,
+  rgba(gray, 0) 0px,
+  rgba(gray, 0) 18px);*/
+}
+
+
+// For iPad
+//
+@include respond-to(tablets) {
+  body {
+    margin: 0 0 0 0;
+  }
+  #grid {
+    max-width: inherit;
+    width: inherit;
+    margin-left: 0;
+  }
+  .content-container{
+    display: block;
+    margin-left: $gutter *2;
+    margin-right: $gutter *2;
+  }
+  .inner-canvas {
+    margin-left: $gutter;
+    margin-right: $gutter;
+  }
+  .t-page-banner {
+    .banner-txt {
+      width: calc(100% - 135px);
+      left: $gutter*2.5;
+    }
+  }
+  .t-l-slogn {
+    font-size: 41px;
+    line-height: 1.3;
+  }
+  .row {
+    &.row-fluid{
+      position: relative;
+      left: -($gutter*2);
+      padding: $base-line-height $gutter*2 $base-line-height $gutter*2;
+      width: calc(100% + 120px);
+    }
+  }
+
+  //
+  // Ipad Grids
+  //
+  .grids {
+    max-width: ($max-width - 120); // content margin-left: 75px + margin-right: 60 = 135px
+    width: calc(100% - 120px);
+    margin-left: $gutter *2;
+  }
+}
+
+//** For Mobile
+//
+@include respond-to(mobile) {
+  body {
+    font-size: $font-size-large;
+  }
+  #grid {
+    max-width: inherit;
+    width: inherit;
+  }
+  .touch{
+    .content-container{
+      margin-top: 150px;
+    }
+  }
+  .content-container {
+    display: block;
+    margin-left: $sm-margin;
+    margin-right: $sm-margin;
+    margin-bottom: $fixed-height-ft-xs;
+  }
+  .row {
+    margin-bottom: $gutter * 2;
+    &.columns,
+    &.fluid-width,
+    &.fixed-width,
+    .row__flex-box {
+      display: block;
+    }
+  }
+  .inner-canvas {
+    margin-left: $sm-margin;
+    margin-right: $sm-margin;
+  }
+  .t-page-banner {
+    .banner-txt {
+      height: 480px;
+      width: $grid * 12;
+      left: $gutter / 2;
+      padding-top: $gutter * 4;
+    }
+  }
+  .t-l-slogn {
+    font-size: 30px;
+    line-height: 1.4;
+    .break {
+      white-space: initial;
+      display: inline;
+    }
+  }
+  .bitmark-cover {
+    img {
+      width: auto;
+    }
+  }
+  //
+  // Girds
+  //
+  $mobile-grid: (100% / 6);
+  .grids {
+    margin-left: $gutter /2;
+    width: calc(100% - 30px);
+    background-image: repeating-linear-gradient( 90deg,
+    rgba(black, .1) 0,
+    rgba(black, .1) 1px,
+    rgba(black, 0) 1px,
+    rgba(black, 0) $mobile-grid);
+  }
+  .grid-gutter-inner-right {
+    left: $mobile-grid;
+    background-image: repeating-linear-gradient( 90deg,
+    rgba(black, .1) 0px,
+    rgba(black, .1) 15px,// 1px is overlap with border.
+    rgba(black, 0) 0px,
+    rgba(black, 0) $mobile-grid);
+  }
+  .grid-gutter-inner-left {
+    right: $mobile-grid * 2;
+    background-image: repeating-linear-gradient( 270deg,
+    rgba(black, .1) 0px,
+    rgba(black, .1) 15px,
+    rgba(black, 0) 0px,
+    rgba(black, 0) $mobile-grid);
+  }
+  .vertical-lines {
+    background-position: 0 25px;
+    background-color: transparent;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAUCAYAAACnOeyiAAAAF0lEQVQYV2NkgALGwc8oLy//39nZyQgAG6YEFYoUN5sAAAAASUVORK5CYII=);
+  }
+  //
+}
+
+//** Mobile & iPad
+@include respond-to(handheld-device) {
+  .content-container{
+    margin-top: 120px ;
+  }
+
+  .row {
+    &.columns {
+      display: block;
+    }
+  }
+
+  .t-page-banner {
+    margin-top: $gutter *5;
+  }
+
+  .t-l-slogn {
+    .break {
+      white-space: initial;
+      display: inline;
+    }
+  }
+
+  .section-baseline-10{
+    margin-top: 0;
+  }
+
+}

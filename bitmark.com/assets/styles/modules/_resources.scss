@@ -1,0 +1,120 @@
+.white-papers-1, .white-papers-2{
+  min-height: 405px;
+}
+.white-paper-img-1{
+  top: 43px;
+}
+.white-paper-img-2{
+  top: 2px;
+}
+
+.faq-list {
+  margin-bottom: $base-line-height*2;
+  a {
+    @extend .default-link-type2;
+  }
+}
+
+.faq-title {
+  @extend h3.paragraph-title;
+  //margin-bottom: 0;
+}
+
+.last-qa-list{
+  margin-bottom: 38px;
+}
+
+.border{
+   img{
+      width: auto;
+      height: 400px;
+      border: 1px solid $btn-inactive;
+   }
+}
+
+.developers .dash-list{
+  p{margin: 0;}
+  ul li:before{
+    content: "";
+  }
+}
+
+.white-papers-margin-t{
+  margin-top: $gutter * 6;
+}
+
+.developers__bitmark-api{
+  margin-bottom: $gutter;
+}
+
+.b-img-holder.position-r{
+  margin-bottom: $base-line-height;
+}
+
+//
+// Blockchain
+//
+.content-container .content .blockchain{
+  width: $grid*6;
+
+  .section{margin-bottom: $gutter*2;}
+
+  .num-list{
+    padding-left: 0;
+    margin-top: $base-line-height;
+    li{padding-left: $gutter /6;}
+  }
+
+  img{width: $full-width;}
+  img.ownership-claims{
+    display: block;
+    width: 80%;
+    margin-left: $gutter*2;
+  }
+}
+
+.blockchain__table{
+  width: $full-width;
+  font-size: $font-size-medium;
+  th {
+    @extend .uppercase;
+    font-weight: normal;
+    text-align: left;
+
+    padding: 3px 0 3px $gutter /6;
+    background: $inactive-window;
+    border-bottom: solid 1px $inactive-window;
+    border-left: solid 0px $inactive-window;
+    border-right: solid 0px $inactive-window;
+
+    &:nth-child(1){width: $grid *3}
+    &:nth-child(2){width: $grid *5}
+    &:nth-child(3){width: $grid *4}
+  }
+  td {
+    padding-left: $gutter /6;
+    border-bottom: solid 1px $inactive-window;
+    border-right: solid 0px $inactive-window;
+    &:last-child{border-right: 0;}
+
+    ul{margin-bottom: 0;}
+  }
+}
+
+@include respond-to(handheld-device) {
+  .faq-list {
+    li{margin-bottom: $gutter/2;}
+  }
+  .white-paper-img{
+    margin-bottom: $base-line-height;
+  }
+  .white-papers-margin-t{
+    margin-top: 0;
+  }
+
+  .content-container .content .blockchain{
+    width: auto;
+    img.ownership-claims{margin-left: $gutter;}
+  }
+
+}

@@ -1,0 +1,71 @@
+
+.term{
+  font-family: "EgyptienneFLTW01", serif;
+  .page-title, h3.paragraph-title{font-family: 'Avenir', serif;}
+   .num-list{
+      margin-left: $gutter /1.8;
+      li{
+         padding-left: $gutter /3;
+         margin-bottom: ($gutter /3)*2;
+       }
+    }
+    .dot-list{
+      margin-left: $gutter /1.8;
+      li{
+         padding-left: $gutter /3;
+         margin-bottom: ($gutter /3)*2;
+      }
+    }
+
+ }
+
+.privacy{
+  @extend .term;
+}
+
+.term, .privacy{
+   .flex-box{
+      flex-wrap: wrap;
+   }
+}
+
+.retention-table{
+  width: 100%;
+  font-size: $font-size-medium;
+  thead th {
+      @extend .uppercase;
+      text-align: left;
+      padding: 4px 5px 2px 5px;
+       background: $inactive-window;
+       font-weight: normal;
+  }
+  td {
+    padding: 3px 0 1px ($gutter /6);
+    border-bottom: solid 1px $inactive-window;
+    border-left: 0;
+    border-right: 0;
+  }
+}
+
+
+@include respond-to(handheld-device){
+   .term{
+      .num-list{
+         margin-left: ($gutter /3)*2;
+      }
+   }
+   .privacy{
+      .dot-list{
+         margin-left: ($gutter /3)*2;
+      }
+   }
+
+   .term, .privacy{
+      .b-content-top{
+         &:last-child{
+            padding-top: 0;
+         }
+      }
+   }
+
+}

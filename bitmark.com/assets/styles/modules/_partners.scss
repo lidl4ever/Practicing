@@ -1,0 +1,164 @@
+// Banner
+//
+.banner-bitmark{
+    display: flex;
+    margin-top: $base-line-height * 2;
+    margin-bottom: $base-line-height * 6;
+   .bitmark img{width: 404px;}
+   .plus{
+      padding-left: $gutter * 2.5;
+      img{width: 65px;}
+   }
+}
+
+.partners-logo{
+  display: flex;
+  padding-left: $grid * 2;
+  .partners-logo__item{
+    padding-right: $gutter * 2;
+    img{width: 190px;}
+  }
+}
+
+// End Banner
+
+//
+// Partner Content
+//
+.partners-content{
+  .position-r.gutter-l{
+    margin-left: $grid;
+  }
+  .button{
+    //margin-top: $base-line-height *3;
+  }
+}
+.height{
+     height: 800px;
+ }
+.heading-highlight{
+   color: $brand-primary;
+}
+//
+//Bitmark can enable data economies
+/* .title{
+   margin-bottom: $gutter /2;
+} */
+.no-bitmark{
+   i{@extend .icon;}
+   .fa-times{
+      color: $color-error;
+   }
+}
+
+.bitmarked{
+      color: $brand-primary;
+}
+
+.icon{
+      padding-right: $gutter /6;
+      font-size: $font-size-medium;
+}
+
+.icon-xs{
+      padding-right: $gutter /6;
+      font-size: $font-size-small;
+}
+
+.data-list{
+   display: flex;
+   .list{
+      margin:0 ($gutter / 2);
+      &:first-child{
+         margin-left: 0;
+      }
+      ul li{
+        @extend .uppercase;
+        margin-bottom: $base-line-height/2;
+      }
+   }
+}
+
+.partner-title-img{
+  margin-bottom: $base-line-height ;
+  img{width: 190px;}
+}
+
+//
+// UC Berkeley
+//
+#berkeley{
+   min-height: 410px;
+}
+.berkeley-img-1{
+   top: 98px;
+   img{width: 240px;}
+}
+
+//ifttt
+#ifttt{
+   min-height: 396px;
+}
+.ifttt-screenshot{
+   width: $gutter * 8;
+}
+.ifttt-img-1{
+   top: 53px;
+}
+
+#chibitronics{
+   min-height: 296px;
+}
+.chibi-img-1{
+   top: 57px;
+}
+
+.hyperledger-img-1{
+   top: 56px;
+}
+.bitmark-engine-img{
+  top: 56px;
+}
+@include respond-to(tablets) {
+  .banner-bitmark{
+    -ms-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    transform: scale(0.7);
+  }
+}
+@include respond-to(mobile) {
+  .banner-bitmark{
+    -ms-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    transform: scale(0.35);
+    margin-bottom: 0;
+  }
+  .partners-logo{
+    .partners-logo__item{
+      width: 48%;
+      &:nth-child(2n+0){padding-right: 0;}
+      &:nth-child(2n+1){padding-right: $gutter/2;}
+      img{width: 100%}
+    }
+  }
+}
+@include respond-to(handheld-device) {
+   .berkeley-img-1, .ifttt-img-1, .chibi-img-1,
+   .hyperledger-img-1, .bitmark-engine-img{
+      margin-bottom: $base-line-height;
+   }
+   .partners-logo{
+      flex-wrap: wrap;
+      padding-left: 0;
+      .partners-logo__item{
+        margin-bottom: $base-line-height;
+      }
+   }
+   .partners-content .position-r.gutter-l{
+      margin-left: 0;
+   }
+
+
+}

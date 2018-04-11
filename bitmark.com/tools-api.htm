@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)https://bitmark.com/tools-api -->
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="assets/app.css">
+</head>
+
+<body>
+  <app ng-version="4.0.3">
+    <div id="app" class="darken">
+      <header class="header">
+        <div class="inner-header">
+          <div class="left">
+            <span class="logo"><a href="https://bitmark.com/"><img alt="bitmark logo" src="assets/img/logo-header.svg"></a></span>
+            <span class="logo-sticky-menu"><a href="https://bitmark.com/"><img alt="bitmark logo" src="assets/img/logo-sticky-menu.svg"></a></span>
+          </div>
+          <div class="right">
+            <div class="nav-mb open">
+              <div class="touch-menu open">
+                <div class="touch-inner">
+                  <span class="top-bun"></span>
+                </div>
+              </div>
+              <ul class="header-menu" itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
+                <div class="submenu-bg">
+                  <li class="first-child"><a href="https://bitmark.com/" class="">Home</a></li>
+                  <li itemprop="name">
+                    <a itemprop="url" href="https://bitmark.com/tools-api" class="active">TOOLS &amp; API</a>
+                    <ul class="submenu">
+                      <li><a href="https://bitmark.com/tools-api/webapp">Web app</a></li>
+                      <li><a href="https://bitmark.com/tools-api/data-donation-app">Donation app</a></li>
+                      <li><a href="https://bitmark.com/tools-api/bitmark-api">Bitmark API</a></li>
+                      <li><a href="https://bitmark.com/tools-api/registry">Registry</a></li>
+                      <li><a href="https://bitmark.com/tools-api/node">Node</a></li>
+                    </ul>
+                  </li>
+                  <li itemprop="name">
+                    <a itemprop="url" href="https://bitmark.com/partners">PARTNERS</a>
+                    <ul class="submenu">
+                      <li><a href="https://bitmark.com/partners/kkfarm">KKFARM</a></li>
+                      <li><a href="https://bitmark.com/partners/uc-berkeley">UC Berkeley</a></li>
+                      <li><a href="https://bitmark.com/partners/ifttt">IFTTT</a></li>
+                      <li><a href="https://bitmark.com/partners/chibitronics">Chibitronics</a></li>
+                      <li><a href="https://bitmark.com/partners/hyperledger">Hyperledger</a></li>
+                    </ul>
+                  </li>
+                  <li itemprop="name">
+                    <a itemprop="url" href="https://bitmark.com/resources">RESOURCES</a>
+                    <ul class="submenu">
+                      <li><a href="https://bitmark.com/resources/blockchain">Blockchain</a></li>
+                      <li><a href="https://bitmark.com/resources/white-papers">White papers</a></li>
+                      <li><a href="https://bitmark.com/resources/faq">FAQ</a></li>
+                    </ul>
+                  </li>
+                  <li itemprop="name"><a href="https://blog.bitmark.com/" target="_blank">Blog</a></li>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <router-outlet></router-outlet>
+      <tools-api ng-version="4.0.3">
+        <div class="page-tools-api" id="grid">
+          <div class="content-container">
+            <div class="content">
+              <section class="row row-fluid flex-box b-content-top data-donation-highlight">
+                <div class=" gutter-r">
+                  <div class="banner-bitmark">
+                    <span class="bitmark"><img alt="Bitmark" src="assets/img/banner-bitmark.png"></span>
+                    <span class="plus"><img alt="Plus" src="assets/img/banner-plus.png"></span>
+                    <div class="digital-property-motion">
+                      <div class="bitmark-words-wrap">
+                        <span class="bitmark-word">photos</span>
+                        <span class="bitmark-word">videos</span>
+                        <span class="bitmark-word">artwork</span>
+                        <span class="bitmark-word">text</span>
+                        <span class="bitmark-word">blog posts</span>
+                        <span class="bitmark-word">code</span>
+                        <span class="bitmark-word">documents</span>
+                        <span class="bitmark-word">location data</span>
+                        <span class="bitmark-word">health data</span>
+                        <span class="bitmark-word">IoT data</span>
+                        <span class="bitmark-word">tweets</span>
+                        <span class="bitmark-word">instagram photos</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="service-columns">
+                    <div class="flex-box flex-wrap">
+                      <div class="service-content">
+                        <ul class="service-grid">
+                          <li>
+                            <div class="service-item" style="background-color: #e4405f;">
+                              <p><img alt="Own your Instagram photos" src="assets/img/tool-api/life-data/intagram.png"></p>
+                              <span>Instagram</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="service-item" style="background-color: #00ABEC;">
+                              <p><img alt="Own your tweets" src="assets/img/tool-api/life-data/twitter.png"></p>
+                              <span>Twitter</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="service-item" style="background-color: #cc2127;">
+                              <p><img alt="Own your Pinterest posts" src="assets/img/tool-api/life-data/pinterest.png"></p>
+                              <span>Pinterest</span>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="col-content">
+                          <h2>User generated content</h2>
+                        </div>
+                      </div>
+                      <div class="service-content">
+                        <ul class="service-grid">
+                          <li>
+                            <div class="service-item" style="background-color: #E8453f;">
+                              <p><img alt="Own your Instawell data" src="assets/img/tool-api/life-data/Instawell.png"></p>
+                              <span>Instawell</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="service-item" style="background-color: #01b0b9;">
+                              <p><img alt="Own your Fitbit data" src="assets/img/tool-api/life-data/Fitbit.png"></p>
+                              <span>Fitbit</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="service-item" style="background-color: #000000;">
+                              <p><img alt="Own your Misfit data" src="assets/img/tool-api/life-data/Misfit.png"></p>
+                              <span>Misfit</span>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="col-content">
+                          <h2>Health &amp; fitness</h2>
+                        </div>
+                      </div>
+                      <div class="service-content">
+                        <ul class="service-grid">
+                          <li>
+                            <div class="service-item" style="background-color: #79BB43;">
+                              <p><img alt="Own your Air Monitor data" src="assets/img/tool-api/life-data/AcerAirMonitor.png"></p>
+                              <span>Acer Air Monitor</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="service-item" style="background-color: #04AFDC;">
+                              <p><img alt="Own your Nest data" src="assets/img/tool-api/life-data/NestThermostat.png"></p>
+                              <span>Nest Thermostat</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="service-item" style="background-color: #007B8B;">
+                              <p><img alt="Own your Home data" src="assets/img/tool-api/life-data/IntesisHome.png"></p>
+                              <span>IntesisHome</span>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="col-content">
+                          <h2>Environment data</h2>
+                        </div>
+                      </div>
+                      <div class="service-content">
+                        <ul class="service-grid">
+                          <li>
+                            <div class="service-item" style="background-color: #23448b;">
+                              <p><img alt="Own your Google drive files" src="assets/img/tool-api/life-data/GoogleDrive.png"></p>
+                              <span>Google Drive</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="service-item" style="background-color: #0C66DE;">
+                              <p><img alt="Own your Dropbox files" src="assets/img/tool-api/life-data/Dropbox.png"></p>
+                              <span>Dropbox</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="service-item" style="background-color: #094AB1;">
+                              <p><img alt="Own your OneDrive files" src="assets/img/tool-api/life-data/OneDrive.png"></p>
+                              <span>OneDrive</span>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="col-content">
+                          <h2>Cloud storage</h2>
+                        </div>
+                      </div>
+                      <div class="service-content">
+                        <ul class="service-grid">
+                          <li>
+                            <div class="service-item" style="background-color: #181936;">
+                              <p><img alt="Own your Google Drive data" src="assets/img/tool-api/life-data/GoogleDrive.png"></p>
+                              <span>Qapital</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="service-item" style="background-color: #666FB4;">
+                              <p><img alt="Own your Stripe data" src="assets/img/tool-api/life-data/Stripe.png"></p>
+                              <span>Stripe</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="service-item" style="background-color: #00BFAA;">
+                              <p><img alt="Own your OneDrive data" src="assets/img/tool-api/life-data/OneDrive.png"></p>
+                              <span>Chain</span>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="col-content">
+                          <h2>Finance &amp; payments</h2>
+                        </div>
+                      </div>
+                      <div class="service-content">
+                        <ul class="service-grid">
+                          <li>
+                            <div class="service-item" style="background-color: #CC73E1;">
+                              <p><img alt="Own your iOS Reminders" src="assets/img/tool-api/life-data/iOS-Reminders.png"></p>
+                              <span>iOS Reminders</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="service-item" style="background-color: #8CC251;">
+                              <p><img alt="Own your Android device data" src="assets/img/tool-api/life-data/AndroidDevice.png"></p>
+                              <span>Android Device</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="service-item" style="background-color: #e8655c;">
+                              <p><img alt="Own your iOS photos" src="assets/img/tool-api/life-data/iOS-Photos.png"></p>
+                              <span>iOS Photos</span>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="col-content">
+                          <h2>Personal information</h2>
+                        </div>
+                      </div>
+                      <div class="service-content">
+                        <ul class="service-grid">
+                          <li>
+                            <div class="service-item" style="background-color: #00B9F1;">
+                              <p><img alt="Own your Wink data" src="assets/img/tool-api/life-data/Wink-Porkfolio.png"></p>
+                              <span>Wink: Porkfolio</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="service-item" style="background-color: #e22056;">
+                              <p><img alt="Own your IoT data" src="assets/img/tool-api/life-data/LGDryer.png"></p>
+                              <span>LG Dryer</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="service-item" style="background-color: #edb112;">
+                              <p><img alt="Own your IoT data" src="assets/img/tool-api/life-data/WhirlpoolWasher.png"></p>
+                              <span>Whirlpool Washer</span>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="col-content">
+                          <h2>IoT &amp; home</h2>
+                        </div>
+                      </div>
+                      <div class="service-content">
+                        <ul class="service-grid">
+                          <li>
+                            <div class="service-item" style="background-color: #2DBE60;">
+                              <p><img alt="Own your Evernote data" src="assets/img/tool-api/life-data/Evernote.png"></p>
+                              <span>Evernote</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="service-item" style="background-color: #ee4433;">
+                              <p><img alt="Own your Note-widget data" src="assets/img/tool-api/life-data/Note-widget.png"></p>
+                              <span>Note  widget</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="service-item" style="background-color: #77e376;">
+                              <p><img alt="Own your Memobird data" src="assets/img/tool-api/life-data/Memobird.png"></p>
+                              <span>Memobird</span>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="col-content">
+                          <h2>Notes</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <h1 class="page-title xs-cap-to-lowercase">
+        Bitmark makes tools that interface with the digital environments where we create and share data.
+      </h1>
+              <section class="row flex-box md-block">
+                <div class="grid-6 gutter-r xs-clear-bottom">
+                  <p class="clear-top p-text">Bitmark’s tools define a new digital freedom by providing an economic framework of standardized property rights, rules and infrastructure – just like the ways in which we own assets in the rest of our lives. The system will allow individuals to derive value from crypto property just as we do from the things we own in the physical world – selling, buying, transferring, donating, licensing, passing down, protecting, and much more.
+                  </p>
+                  <p class="last-child p-text">These tools interface with the digital environments where we create and share things: social media, fitness and health apps, productivity and financial software, and much more. It will allow users to simply apply a mark of accepted ownership to a new creation and embed it into Bitmark’s standardized, universal crypto property system.</p>
+                </div>
+                <div class="grid-6 gutter-l ">
+                </div>
+              </section>
+              <section class="row margin-top-large">
+                <div class="flex-box md-block">
+                  <div class="grid-6 gutter-r" id="webapp">
+                    <h2 class="section-title">bitmark web app</h2>
+                    <p class="p-text">
+                      Bitmark’s web app is where all data is bitmarked and a record of one’s ownership is kept. From the web app you are able to bitmark, sell, transfer, donate, license, and do basically everything that is possible with your property in the physical world. This is where your digital estate begins to take shape.
+                    </p>
+                    <div class="button clear-margin-b margin-t-2base"><a class="btn fixed view-more" href="https://a.bitmark.com/" target="_blank">Go to web app</a></div>
+                  </div>
+                  <div class="grid-6 gutter-l" id="registry">
+                    <h2 class="section-title">Bitmark registry</h2>
+                    <p class="p-text">The Registry is a public record of all property transactions conducted through the Bitmark system. You can use the Regustry to verify ownership and authenticity of a bitmark before purchase, or simply to confirm transactions have been publicly recorded.</p>
+                    <div class="button clear-margin-b margin-t-2base"><a class="btn fixed view-more" href="http://registry.bitmark.com/" target="_blank">Go to Registry</a></div>
+                  </div>
+                </div>
+              </section>
+              <section class="row margin-top-large">
+                <div class="flex-box md-block">
+                  <div class="grid-6 gutter-r">
+                    <h2 class="section-title">Bitmark data donation</h2>
+                    <p class="p-text">
+                      Your personal data is your most valuable digital asset. Bitmark makes it simple and safe for users to donate their data to health researchers. Through the Data Donation app, donors can safely connect their Health app data to studies that they choose, securely donate their data with full consent, and easily track all their donations.
+                    </p>
+                    <div class="button clear-margin-b margin-t-2base"><a class="btn fixed view-more" href="https://bitmark.com/tools-api/data-donation-app">More info</a></div>
+                  </div>
+                  <div class="grid-6 gutter-l" id="node">
+                    <h2 class="section-title">Bitmark Node</h2>
+                    <p class="p-text">Bitmark’s blockchain is an independent chain, optimized for storing property titles, or bitmarks, and does not have its own internal currency (transaction fees are in bitcoin). The peer-to-peer network is written in <a href="https://golang.org/" target="_blank">Golang</a> and uses the ZeroMQ distributed messaging library. Consensus is secured using argon2 hashing (proof-of-work). If you're interested in participating by running the Bitmark node in a <a href="https://www.docker.com/what-docker" target="_blank">Docker container</a>, here’s how to begin.</p>
+                    <div class="button clear-margin-b margin-t-2base"><a class="btn fixed view-more" href="https://hub.docker.com/r/bitmark/bitmark-node/" target="_blank">Run bitmark node</a></div>
+                  </div>
+                </div>
+              </section>
+              <section class="row margin-top-large">
+                <div class="flex-box md-block">
+                  <div class="grid-6 gutter-r" id="api">
+                    <h2 class="section-title">Bitmark API</h2>
+                    <p class="p-text">
+                      The Bitmark API is an open REST API that provides software developers with a simple interface to read from and write to the open-source Bitmark blockchain. The Bitmark API allows developers to query the blockchain for assets and bitmarks meeting specified criteria, as well as providing basic transaction functionality, such as bitmark issuances and bitmark transfers.
+                    </p>
+                    <p>Functionality includes:</p>
+                    <ul class="dot-list">
+                      <li>GET bitmarks</li>
+                      <li>GET assets</li>
+                      <li>POST issue</li>
+                      <li>POST transfer</li>
+                    </ul>
+                    <div class="button clear-margin-b margin-t-2base"><a class="btn view-more" href="http://docs.bitmarkcoreapi.apiary.io/" target="_blank">Try the API</a></div>
+                  </div>
+                  <div class="column grid-6 gutter-l">
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </tools-api>
+      <footer class="footer">
+        <div class="footer-wrapper">
+          <div class="inner-footer">
+            <div class="grid-6 gutter-r">
+              <span class="logo">
+            <a href="https://bitmark.com/">
+              <span class="logo-img logo-home-page"></span>
+              <span class="logo-img logo-content-page"></span>
+              </a>
+              </span>
+            </div>
+            <div class="grid-6 gutter-l">
+              <nav class="footer-nav">
+                <ul class="footer-menu" itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
+                  <li class="active first-child" itemprop="name">
+                    <a itemprop="url" href="https://bitmark.com/press">Press</a>
+                    <ul class="submenu">
+                      <li><a fragment="news" href="https://bitmark.com/press#news">News</a></li>
+                      <li><a fragment="press-releases" href="https://bitmark.com/press#press-releases">Press releases</a></li>
+                    </ul>
+                  </li>
+                  <li class="active" itemprop="name">
+                    <a itemprop="url" href="https://bitmark.com/company">Company</a>
+                    <ul class="submenu">
+                      <li><a href="https://bitmark.com/company/about">About</a></li>
+                      <li><a href="https://bitmark.com/company/careers">Careers</a></li>
+                      <li><a href="https://bitmark.com/company/contact">Contact us</a></li>
+                      <li><a href="http://bitmark.us14.list-manage.com/subscribe?u=6ba47d35944fc04102b0e9ae6&amp;id=c859952dd3" target="_blank">Newsletter</a></li>
+                    </ul>
+                  </li>
+                  <li class="active" itemprop="name"><a itemprop="url" href="https://bitmark.com/term">Legal</a>
+                    <ul class="submenu">
+                      <li><a itemprop="url" href="https://bitmark.com/governance-policy">Governance</a></li>
+                      <li><a itemprop="url" href="https://bitmark.com/data-retention">Data retention</a></li>
+                      <li><a itemprop="url" href="https://bitmark.com/privacy">Privacy</a></li>
+                      <li><a itemprop="url" href="https://bitmark.com/term">Terms</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="ft-socials">
+                  <li><a href="https://www.facebook.com/bitmarkinc" target="_blank"><img alt="facebook" src="assets/img/social-icons/dark-facebook-48.png"></a></li>
+                  <li><a href="https://www.instagram.com/bitmarkinc/" target="_blank"><img alt="instagram" src="assets/img/social-icons/dark-instagram-48.png"></a></li>
+                  <li><a href="https://twitter.com/bitmarkinc" target="_blank"><img alt="twitter" src="assets/img/social-icons/dark-twitter-48.png"></a></li>
+                  <li><a href="https://github.com/bitmark-inc" target="_blank"><img alt="github" src="assets/img/social-icons/dark-github-48.png"></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </app>
+</body>
+
+</html>

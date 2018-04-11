@@ -1,0 +1,122 @@
+
+//== Color
+//
+//
+
+// Bitmark color
+//
+$brand-primary:         #0060F2;
+$color-base:            #000;
+$color-inactive:        #C1C1C1;
+$color-blue-gray:       #EDF0F4;
+
+$black:                 #000;
+$highlight:             #e6ff00;
+$light-gray:            #f9f9f9;
+$color-field-border:    #B2C1D8;
+$color-error:           #FF003C;
+$mouseover-color:       #F1F9FF;
+$finished:              #f9fcff;
+$active-step:           #EDF0F4;
+
+$bg-gray:               #bfbfbf;
+$font-default-gray:     #808080;
+$gray:                  #808080;
+$chibi-gray:            #BDBDBD;
+$input-border:          #DFE3EF;
+$white:                 #fff;
+
+$link-active:           $brand-primary;
+$link-inactive:         #a4b5cd;
+
+//Module theme
+$btn-inactive:          #A4B5CD;
+$color-gray-30:         lighten($black, 30%);
+$color-gray-50:         lighten($black, 50%);
+$inactive-navi:         lighten($black, 60%);//999999
+$color-black-70:        lighten($black, 70%);
+$color-black-80:        lighten($black, 80%);
+$color-black-90:        lighten($black, 90%);
+$color-black-96:       lighten($black, 96%); //F5F5F5
+$inactive-window:       $color-black-96; //F5F5F5
+$dark-gray:             lighten($black, 10%);
+$light-gray:            #f1f1f1;
+$active-window:         #EDF0F4;
+$active-asset:          #F2FAFF;
+
+
+
+//Bitmark bar
+$border-thick:                  3px;
+
+
+
+//Grid
+//
+//
+$max-width:                     1600px;
+$full-width:                    100%;
+$grid-numbers:                  12;
+$gutter:                        30px;
+$grid:                          ($full-width / $grid-numbers); // %
+$grid-md:                       $grid * 4;
+$col:                           ($max-width / $grid-numbers); // px
+$element-max-width:             360px;
+
+//Layout margin / spacing
+//
+//
+$vertical-space-xl:             10px;
+$vertical-space-small:          7px;
+$vertical-line-spacing:         5px;
+
+$main-padding-left:             $grid;
+$bitmark-code-width:            ($grid * 6);
+$default-left-space:            ($gutter * 2);
+
+$desktop-margin:                 $gutter * 4;
+$md-margin:                      $gutter * 2;
+$sm-margin:                      $gutter / 2;
+
+//Layout 1280 max-width
+$desktop-max-width:                1280px - ($desktop-margin * 2);
+$half-max-width:                   ($desktop-max-width / 2) - ($gutter*2);
+$one-fourth-max-width:             ($desktop-max-width / 4) - ($gutter);
+
+//Footer
+$fixed-height:                    $gutter * 6;
+$fixed-height-ft-xs:              630px;
+$logo-width:                      545px;
+
+
+// spacing base unit for mobile
+$mb-menu-icon-width:            45px;
+
+//
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-andale:          'AndaleMono', sans-serif;
+$font-avenir:          'Avenir', sans-serif;
+$font-avenir-next:     'AvenirNext', sans-serif;
+
+//1em = 12pt = 16px = 100%
+$font-size-xxlarge:     24px;
+$font-size-xlarge:      18px;
+$font-size-large:       16px;
+$font-size-medium:      14px;
+$font-size-small:       13px;
+$font-size-xsmall:      12px;
+$font-size-xxsmall:     11px;
+
+$font-weight-base:      300;
+$font-weight-strong:    500;
+$font-weight-increase:  600;
+$font-weight-max:       bold;
+
+$line-height:           25px; // 16px line-height
+$base-line-height:      20px;
+
+
+
